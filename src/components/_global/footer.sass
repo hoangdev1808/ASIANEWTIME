@@ -1,0 +1,149 @@
+footer
+	width: 100%
+	.footer-header
+		padding-bottom: 25px
+		border-bottom: solid 1px #cccccc
+		.footer-item
+			width: 100%
+			min-height: 80px
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			padding-top: 20px
+			.item-header
+				h1
+					color: $title
+					font-weight: 700
+				em
+					padding-right: 10px
+					color: #cccccc
+					font-size: 24px
+					font-weight: 400
+					line-height: 24px
+					text-align: left
+				.text
+					color: $gray
+					font-weight: 700
+					line-height: 24px
+					text-align: left
+			.item-body
+				padding-top: 7px
+				h2
+					color: $gray
+					font-weight: 400
+					line-height: 24px
+				.desc
+					color: $title
+					font-size: 18px
+					font-weight: 400
+					line-height: 24px
+					span
+						color: $title
+						font-size: 24px
+						font-weight: 700
+						line-height: 24px
+	.footer-bottom
+		padding-top: 35px
+		margin-bottom: 40px
+		.footer-item
+			.item-header
+				position: relative
+				padding-top: 16px
+				.caption
+					padding-bottom: 10px
+					color: $title
+					font-weight: 700
+					line-height: 24px
+					white-space: nowrap
+				&::before
+					position: absolute
+					top: 0
+					left: 0
+					content: ''
+					background-color: $main
+					width: 30px
+					height: 2px
+			.item-body
+				.desc
+					p
+						color: $gray
+						font-size: 1rem
+						font-weight: 400
+						line-height: 24px
+						text-align: left
+						padding-bottom: 35px
+						strong
+							font-size: 1rem
+							font-weight: 700
+							color: #6d6e70
+	.coppy-right
+		padding-top: 25px
+		border-top: solid 1px #cccccc
+		.socail
+			display: flex
+			list-style: none
+			padding: 0
+			li
+				width: 40px
+				height: 40px
+				border-radius: 50%
+				margin-right: 10px
+				border: 1px solid #959595
+				transition: all .5s
+				a
+					display: flex
+					align-items: center
+					justify-content: center
+					em
+						color: $gray
+						font-size: 24px
+						font-weight: 400
+						text-align: center
+				&:hover
+					transition: all .5s
+					a
+						em
+							color: #ffffff
+					&:first-child
+						background-color: #38569a
+					&:nth-child(2)
+						background-color: #f80000
+					&:last-child
+						background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d)
+		.copy
+			margin-left: 28px
+			color: $gray
+			font-size: 12/16*1rem
+			font-weight: 400
+			line-height: 18px
+			text-align: left
+			letter-spacing: 0.6px
+			a
+				&:hover
+					color: $main
+		.list-coppy
+			list-style: none
+			padding-bottom: 7px
+			padding-left: 0
+			li
+				padding: 0 10px
+				position: relative
+				a
+					color: $gray
+					font-size: 12/16*1rem
+					line-height: 18px
+					text-align: left
+					text-decoration: underline
+					letter-spacing: 0.6px
+				&::after
+					position: absolute
+					content: '|'
+					color: $gray
+					top: 0
+					right: 0
+				&:last-child
+					&::after
+						content: ''
+				&:hover
+					a
+						color: $main

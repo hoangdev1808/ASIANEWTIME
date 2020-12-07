@@ -1,0 +1,201 @@
+@media(min-width: 1280.98px)
+	@mixin transition($time, $property: all, $easing: ease-in)
+		transition: $property $time $easing
+	$parallax-offset: 0
+	$content-offset: 30vh
+	$transition-speed: 2s
+	$slide-number: 9
+	.full-page
+		overflow: hidden
+		section
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+			overflow: hidden
+			will-change: transform
+			backface-visibility: hidden
+			// height: 100vh
+			height: 100vh + $parallax-offset
+			position: fixed
+			width: 100%
+			transform: translateY(100vh)
+			@include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1))
+			&:first-child 
+				opacity: 1
+				transform: translateY(-$parallax-offset / 2)
+	@for $i from 1 to ($slide-number + 1)
+		.full-page section:nth-child(#{$i})
+			// z-index: ($slide-number + 1) - $i 
+			z-index: ($slide-number + 1) - $i 
+			z-index: $i
+	section.up-scroll 
+		transform: translate3d(0,-$parallax-offset / 2,0)
+		+ section
+			transform: translate3d(0,(100vh + $parallax-offset),0)
+	section.down-scroll
+		transform: translate3d(0,-$parallax-offset,0)
+		+ section
+			transform: translate3d(0,-$parallax-offset / 2,0)
+		// &:last-child
+		// 	transform: translate3d(0,calc(-30vh - 780px) ,0)
+
+#nav-pagination
+	position: fixed
+	top: 50%
+	right: 0
+	padding-right: 30px
+	transform: translateY(-50%)
+	z-index: 999
+	@media(max-width: 1280.98px)
+		display: none
+	ul
+		list-style-type: none
+		padding-left: 0
+		li
+			margin: 30px 0
+			width: 7px
+			height: 7px
+			background: #fff
+			cursor: pointer
+			border-radius: 50%
+			font-size: 12px
+			font-size: 0
+			display: flex
+			justify-content: center
+			transition: .4s cubic-bezier(0.22, 0.44, 0, 1) all
+			align-items: center
+			color: #ffffff
+			&.active, &:hover
+				color: #fff
+				transform: scale(1.8)
+			&.active
+				
+				background: #ffffff
+@-webkit-keyframes wheel 
+	0%
+	opacity: 0
+	transform: scale(.3)
+	top: 0
+	50%
+	opacity: 1
+	transform: scale(1)
+	100% 
+	opacity: 0
+	transform: scale(.3)
+	top: 20px
+
+.wheel
+	width: 30px
+	height: 30px
+	// right: 32px
+	position: absolute
+	bottom: 100px
+	right: 20px
+	opacity: 1
+	transition: opacity .3s ease-in-out
+	z-index: 5
+	span
+		position: absolute
+		width: 100%
+		height: 2px
+		opacity: 0
+		transform: scale(.3)
+		&:first-child
+			animation: wheel 2s ease-in-out .5s infinite
+		&:nth-child(2)
+			animation: wheel 2s ease-in-out 1s infinite
+		&:nth-child(3)
+			animation: wheel 2s ease-in-out infinite
+		&:before, &:after
+			content: ''
+			position: absolute
+			top: 0
+			height: 100%
+			width: 50%
+			background-color: #fff
+		&::before
+			left: 0
+			transform: skewY(30deg)
+		&::after
+			right: 0
+			width: 50%
+			transform: skewY(-30deg)
+@keyframes fadein
+	from
+	opacity: 0
+
+	to
+	opacity: 1
+
+/* Firefox < 16
+@-moz-keyframes fadein
+	from
+	opacity: 0
+
+	to
+	opacity: 1
+
+/* Safari, Chrome and Opera > 12.1
+@-webkit-keyframes fadein
+	from
+	opacity: 0
+
+	to
+	opacity: 1
+
+/* Internet Explorer
+@-ms-keyframes fadein
+	from
+	opacity: 0
+
+	to
+	opacity: 1
+
+/* Opera < 12.1
+@-o-keyframes fadein
+	from
+	opacity: 0
+
+	to
+	opacity: 1
+.full-page
+	main 
+		padding-top: 0 
+	section 
+		display: flex
+		@media(min-width: 1280.98px)
+			.animation-left
+				opacity: 0
+				transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+				transform: translateX(-300px)
+			.animation-right
+				opacity: 0
+				transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+				transform: translateX(300px)
+			.animation-bottom
+				opacity: 0
+				transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+				transform: translateY(300px)
+			.animation-top
+				opacity: 0
+				transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+				transform: translateY(-300px)
+			&.current-page
+				.animation-left
+					opacity: 1
+					transform: translateX(0)
+				.animation-right
+					opacity: 1
+					transform: translateX(0)
+				.animation-bottom
+					opacity: 1
+					transform: translateY(0)
+				.animation-top
+					opacity: 1
+					transform: translateY(0)
+			> div 
+				display: flex 
+				flex-direction: column
+				> .Module 
+					width: 100%
+					height: 100%

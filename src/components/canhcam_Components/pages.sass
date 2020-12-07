@@ -1,0 +1,42 @@
+.modulepager
+	.pagination
+		margin-top: 20px
+		display: flex
+		list-style-type: none
+		justify-content: center
+		flex-wrap: wrap
+		padding: 0
+		@media screen and ( min-width: 1024px )
+			margin-top: 30px
+		li
+			margin: 10px
+			color: $main
+			display: flex
+			justify-content: center
+			align-items: center
+			&:last-child
+				margin-right: 0
+			a, span
+				width: 35px
+				height: 35px
+				font-size: 16px
+				color: #666666
+				display: flex
+				justify-content: center
+				align-items: center
+				background: $bg_color
+				transition: .2s ease-in-out all
+				// border-radius: 5px
+				overflow: hidden
+				font-size: r(18px)
+
+			&.active, &:hover
+				a, span
+					color: #ffffff
+					background: $main
+					// border: 1px solid $main
+			@media(min-width: 1024px)
+
+				a, span
+					width: 40px
+					height: 40px

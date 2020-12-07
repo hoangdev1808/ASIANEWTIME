@@ -1,0 +1,27 @@
+{
+	"name": "gulp-html",
+	"description": "transpile pug, sass, js(es6) => html, css(w/ added prefix, auto-sorted css, minified), js(babeled, minified)",
+	"main": "gulpfile.babel.js",
+	"authors": [
+		"vdmanh99"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/voducmanh99/MySource",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"jquery": "3.5.1",
+		"fancybox": "3.5.7",
+		"plyr": "3.5.4",
+		"mdi": "4.5.95",
+		"font-awesome": "5.15.1",
+		"linearicons": "1.0.2",
+		"lazysizes": "5.1.0",
+		"jssocials": "^1.5.0"
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"name": "gulp-html",
+	"description": "transpile pug, sass, js(es6) => html, css(w/ added prefix, auto-sorted css, minified), js(babeled, minified)",
+	"main": "gulpfile.babel.js",
+	"version": "3.2.3",
+	"repository": "https://github.com/voducmanh99/MySource.git",
+	"private": false,
+	"author": "voducmanh99",
+	"license": "MIT",
+	"scripts": {
+		"start": "gulp"
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	},
+	"dependencies": {
+		"@babel/core": "7.2.2",
+		"@babel/preset-env": "7.3.1",
+		"@babel/register": "7.0.0",
+		"autoprefixer": "9.4.3",
+		"bootstrap": "^4.5.3",
+		"bower": "^1.8.8",
+		"browser-sync": "^2.26.12",
+		"css-declaration-sorter": "4.0.1",
+		"cssnano": "4.1.8",
+		"del": "3.0.0",
+		"graceful-fs": "4.1.15",
+		"gulp": "4.0.0",
+		"gulp-babel": "8.0.0",
+		"gulp-concat": "2.6.1",
+		"gulp-plumber": "1.2.1",
+		"gulp-postcss": "8.0.0",
+		"gulp-pug": "4.0.1",
+		"gulp-rename": "1.4.0",
+		"gulp-sass": "4.0.2",
+		"gulp-sourcemaps": "2.6.4",
+		"gulp-terser": "1.1.7",
+		"gulp-typescript": "^5.0.1",
+		"gulp-uglify": "3.0.2",
+		"remixicon": "^2.5.0",
+		"swiper": "^6.3.5",
+		"vendors": "^1.0.4"
+	}
+}
