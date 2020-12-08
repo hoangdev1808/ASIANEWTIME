@@ -294,6 +294,38 @@
 		position: absolute
 		top: 76%
 		left: 60%
+		.socail
+			display: flex
+			align-items: center
+			list-style: none
+			margin-top: 30px
+			padding-left: 0
+			li
+				width: 36px
+				height: 36px
+				border-radius: 50%
+				background-color: #ffffff
+				display: flex
+				align-items: center
+				justify-content: center
+				margin-right: 10px
+				transition: all .5s
+				a
+					em
+						color: #666666
+						font-size: 24/16*1rem
+						font-weight: 400
+				&:hover
+					transition: all .5s
+					a
+						em
+							color: #ffffff
+					&:first-child
+						background-color: #38569a
+					&:nth-child(2)
+						background-color: #f80000
+					&:last-child
+						background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d)
 
 	@media(min-width: 1025px)
 		.logo-fake-header
@@ -344,7 +376,7 @@
 		.logo-fake-header
 			opacity: 1
 			transform: translateX(0)
-		ul
+		.menu-fake-header
 			li
 				opacity: 1
 				transform: translateX(0)
