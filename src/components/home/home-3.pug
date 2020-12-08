@@ -1,0 +1,53 @@
+section.kv-section.home-page-2(setBackground='../img/index/bg-home-3.png')
+	.container
+		.zone-section
+			.main-title dự án
+			.zone-desc Mong muốn mang lại giá trị tư vấn - đầu tư phát triển bền vững cho thị trường bất động sản Việt Nam với những sản phẩm chất lượng từ những dự án mà chúng tôi mang đến.
+		.zone-content
+			.tab-panels
+				.category-nav Danh mục
+					em.ri-arrow-down-s-line
+				ul.tabs
+					li.active(rel='panel-1') Đang triển khai
+					li(rel='panel-2') Đã triển khai
+					li(rel='panel-3') Resale
+				#panel-1.panel.active
+					.kv-slide
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.project-item
+										a.item-link(href="")
+											.item-img
+												img.lazyload(data-src="./img/index/pro-1.png", alt="")
+											.item-desc
+												.text Baria Residence
+								.swiper-slide
+									.project-item
+										a.item-link(href="")
+											.item-img
+												img.lazyload(data-src="./img/index/pro-2.png", alt="")
+											.item-desc
+												.text Barya City
+								.swiper-slide
+									.project-item
+										a.item-link(href="")
+											.item-img
+												img.lazyload(data-src="./img/index/pro-3.png", alt="")
+											.item-desc
+												.text Aria Đà Nẵng
+								.swiper-slide
+									.project-item
+										a.item-link(href="")
+											.item-img
+												img.lazyload(data-src="./img/index/pro-4.png", alt="")
+											.item-desc
+												.text Aria Vũng Tàu
+								.swiper-slide
+									.project-item
+										a.item-link(href="")
+											.item-img
+												img.lazyload(data-src="./img/index/pro-5.png", alt="")
+											.item-desc
+												.text Long Thành Central
+
