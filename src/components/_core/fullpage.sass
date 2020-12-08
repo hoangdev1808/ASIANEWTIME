@@ -215,36 +215,48 @@
 	justify-content: center
 	align-items: center
 	background-color: $main
-	background-image: linear-gradient(to top, rgba(255, 255, 255, 0.75) 0%, rgba(255, 203, 4, 0.75) 100%)
+	background-image: linear-gradient(to top, rgba(255, 255, 255, 0.75) 0%, rgba($color: #ffcb04, $alpha: 0.75) 100%)
 	background-size: cover
 	background-position: center center
-	transition: all 1s cubic-bezier(.22, .44, 0, 1)
-	ul
+	transition: all 2s cubic-bezier(.22, .44, 0, 1)
+	.menu-fake-header
 		list-style: none
 		padding-left: 0
-		text-align: center
+		text-align: left
 		li
 			opacity: 0
 			transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
 			transform: translateX(300px)
-		a
-			transition: 2s ease-in-out all
-			text-transform: uppercase
-			padding: 10px
-			display: inline-block
-			font-size: 24px
-			color: #ffffff
-			opacity: 0
+			a
+				transition: .5s ease-in-out all
+				text-transform: uppercase
+				display: inline-block
+				opacity: 0
+				color: $title
+				font-size: 30/16*1rem
+				font-weight: 700
+				line-height: 60px
+				padding: 0
 			&:hover
-				text-decoration: underline
-
+				a
+					position: relative
+					color: $white
+					transform: translateX(35px)
+					&::before
+						position: absolute
+						left: -30px
+						top: 50%
+						content: ''
+						width: 20px
+						height: 1px
+						background-color: #ffffff
 	.close-button
-		color: #ffffff
+		color: $title
 		display: flex
 		align-items: center
 		position: absolute
 		transform: rotate(90deg) translateY(-50%)
-		top: 50%
+		top: 45%
 		cursor: pointer
 		right: 20px
 		transition: all 1s cubic-bezier(.22, .44, 0, 1)
@@ -278,18 +290,24 @@
 			transform: translateY(300px)
 			@media(min-width: 1025px)
 				display: none
+	.menu-fake-bottom
+		position: absolute
+		top: 76%
+		left: 60%
+
 	@media(min-width: 1025px)
 		.logo-fake-header
 			position: initial
 			top: initial
 			z-index: 21
-			// img 
-			//     height: 121px
+
 		.menu-fake-header
 			position: absolute
 			z-index: 11
-			width: 100%
 			justify-content: flex-end
+			left: 60%
+			top: 40%
+			padding-top: 60px
 			ul
 				// text-align: right
 				// padding-right: 50px
@@ -316,12 +334,13 @@
 	// 		ul 
 				// padding-right: 70px
 	&.active
-		transition: all 1s cubic-bezier(.22, .44, 0, 1)
+		transition: all 2s cubic-bezier(.22, .44, 0, 1)
 		min-width: 1200px
 		min-height: 1200px
 		opacity: .9
 		visibility: visible
 		pointer-events: initial
+		overflow: hidden
 		.logo-fake-header
 			opacity: 1
 			transform: translateX(0)
@@ -329,6 +348,8 @@
 			li
 				opacity: 1
 				transform: translateX(0)
+				&:nth-child(1)
+					display: none
 				&:nth-child(2)
 					transition-delay: .2s
 				&:nth-child(3)

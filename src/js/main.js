@@ -57,20 +57,14 @@ function nextItem() {
 	$('header').addClass('active')
 	$('#fake-header-open').addClass('active')
 	$('header .search-wrapper').removeClass('active')
-	$('.back-to-top').removeClass('active')
-	$('.back-to-home').removeClass('active')
 	if ($currentSlide.is(':first-child')) {
 		$('#fake-header').removeClass('active');
 	}
 	if (currentSlideNumber == 1) {
 		$(' #fake-header-open').addClass('last')
-		$('.back-to-top').addClass('active')
-		$('.back-to-home').addClass('active')
 		$('#fake-header').removeClass('active');
 	} else {
 		$('#fake-header-open').removeClass('last')
-		$('.back-to-top').addClass('active')
-		$('.back-to-home').addClass('active')
 	}
 	if (currentSlideNumber == 6) {
 		$('.full-page footer').addClass('active')
@@ -79,6 +73,7 @@ function nextItem() {
 	}
 	$('#nav-pagination ul li').removeClass('active')
 	$('#nav-pagination ul li:nth-child(' + (currentSlideNumber + 1) + ')').addClass('active')
+	$('header .main-nav .navbar-collapse .navbar-nav .nav-item').appendTo('#fake-header .menu-fake-header')
 }
 
 function previousItem() {
