@@ -38,7 +38,7 @@
 		"gulp-sourcemaps": "2.6.4",
 		"gulp-terser": "1.1.7",
 		"gulp-typescript": "^5.0.1",
-		"gulp-uglify": "3.0.2",
+		"gulp-uglify": "^3.0.2",
 		"remixicon": "^2.5.0",
 		"swiper": "^6.3.5",
 		"vendors": "^1.0.4"

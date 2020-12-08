@@ -13,7 +13,6 @@ export const jsTask = () => {
 		"src/js/main.js"
 		])
 		.pipe(plumber())
-		.pipe(sourcemap.init())
 		.pipe(babel({
 			presets: ["@babel/preset-env"]
 		}))

@@ -20,15 +20,15 @@
 			width: 100%
 			transform: translateY(100vh)
 			@include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1))
-			&:first-child 
+			&:first-child
 				opacity: 1
 				transform: translateY(-$parallax-offset / 2)
 	@for $i from 1 to ($slide-number + 1)
 		.full-page section:nth-child(#{$i})
 			// z-index: ($slide-number + 1) - $i 
-			z-index: ($slide-number + 1) - $i 
+			z-index: ($slide-number + 1) - $i
 			z-index: $i
-	section.up-scroll 
+	section.up-scroll
 		transform: translate3d(0,-$parallax-offset / 2,0)
 		+ section
 			transform: translate3d(0,(100vh + $parallax-offset),0)
@@ -69,9 +69,9 @@
 				color: #fff
 				transform: scale(1.8)
 			&.active
-				
+
 				background: #ffffff
-@-webkit-keyframes wheel 
+@-webkit-keyframes wheel
 	0%
 	opacity: 0
 	transform: scale(.3)
@@ -122,10 +122,10 @@
 			transform: skewY(-30deg)
 @keyframes fadein
 	from
-	opacity: 0
+		opacity: 0
 
 	to
-	opacity: 1
+		opacity: 1
 
 /* Firefox < 16
 @-moz-keyframes fadein
@@ -159,9 +159,9 @@
 	to
 	opacity: 1
 .full-page
-	main 
-		padding-top: 0 
-	section 
+	main
+		padding-top: 0
+	section
 		display: flex
 		@media(min-width: 1280.98px)
 			.animation-left
@@ -193,9 +193,271 @@
 				.animation-top
 					opacity: 1
 					transform: translateY(0)
-			> div 
-				display: flex 
+			> div
+				display: flex
 				flex-direction: column
-				> .Module 
+				> .Module
 					width: 100%
 					height: 100%
+#fake-header
+	position: fixed
+	top: -50%
+	opacity: 0
+	visibility: hidden
+	pointer-events: none
+	left: 0
+	transform: translateX(-50%)
+	z-index: 9999
+	min-width: 0
+	min-height: 0
+	border-radius: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: $main
+	background-image: linear-gradient(to top, rgba(255, 255, 255, 0.75) 0%, rgba(255, 203, 4, 0.75) 100%)
+	background-size: cover
+	background-position: center center
+	transition: all 1s cubic-bezier(.22, .44, 0, 1)
+	ul
+		list-style: none
+		padding-left: 0
+		text-align: center
+		li
+			opacity: 0
+			transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+			transform: translateX(300px)
+		a
+			transition: 2s ease-in-out all
+			text-transform: uppercase
+			padding: 10px
+			display: inline-block
+			font-size: 24px
+			color: #ffffff
+			opacity: 0
+			&:hover
+				text-decoration: underline
+
+	.close-button
+		color: #ffffff
+		display: flex
+		align-items: center
+		position: absolute
+		transform: rotate(90deg) translateY(-50%)
+		top: 50%
+		cursor: pointer
+		right: 20px
+		transition: all 1s cubic-bezier(.22, .44, 0, 1)
+		em
+			font-size: 36px
+			margin-right: 10px
+		span
+			text-transform: uppercase
+		&:hover
+			color: #ffffff
+	.logo-fake-header
+		position: absolute
+		top: 15vh
+		z-index: 11
+		opacity: 0
+		transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+		transform: translateY(300px)
+	.menu-fake-header
+		ul
+			.item
+				a
+				span
+					display: none
+	.menu-fake-header
+		.Module-141
+			display: flex
+			justify-content: center
+			align-items: center
+			opacity: 0
+			transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+			transform: translateY(300px)
+			@media(min-width: 1025px)
+				display: none
+	@media(min-width: 1025px)
+		.logo-fake-header
+			position: initial
+			top: initial
+			z-index: 21
+			// img 
+			//     height: 121px
+		.menu-fake-header
+			position: absolute
+			z-index: 11
+			width: 100%
+			justify-content: flex-end
+			ul
+				// text-align: right
+				// padding-right: 50px
+				.item
+					position: relative
+					display: flex
+					align-items: center
+					justify-content: flex-end
+					a
+						position: relative
+					.number
+						font-size: 18px
+						font-weight: 300
+						display: block
+						padding-left: 25px
+						color: rgba(#ffffff,0.5)
+					&.active, &:hover
+						a
+							text-decoration: underline
+						.number
+							color: rgba(#ffffff,1)
+	// @media(min-width: 1200px)
+	// 	.menu-fake-header
+	// 		ul 
+				// padding-right: 70px
+	&.active
+		transition: all 1s cubic-bezier(.22, .44, 0, 1)
+		min-width: 1200px
+		min-height: 1200px
+		opacity: .9
+		visibility: visible
+		pointer-events: initial
+		.logo-fake-header
+			opacity: 1
+			transform: translateX(0)
+		ul
+			li
+				opacity: 1
+				transform: translateX(0)
+				&:nth-child(2)
+					transition-delay: .2s
+				&:nth-child(3)
+					transition-delay: .3s
+				&:nth-child(4)
+					transition-delay: .4s
+				&:nth-child(5)
+					transition-delay: .5s
+				&:nth-child(6)
+					transition-delay: .6s
+				&:nth-child(7)
+					transition-delay: .7s
+				&:nth-child(8)
+					transition-delay: .8s
+				&:nth-child(9)
+					transition-delay: .9s
+			a
+				opacity: 1
+		.menu-fake-header
+			.Module-141
+				opacity: 1
+				transform: translateX(0)
+				// transition-delay: 1s
+		.main-menu
+			.register-news
+				opacity: 1
+				transform: translateX(0)
+@keyframes fadein
+	from
+		opacity: 0
+
+	to
+		opacity: 1
+
+/* Firefox < 16
+@-moz-keyframes fadein
+	from
+	opacity: 0
+
+	to
+	opacity: 1
+
+/* Safari, Chrome and Opera > 12.1
+@-webkit-keyframes fadein
+	from
+	opacity: 0
+
+	to
+	opacity: 1
+
+/* Internet Explorer
+@-ms-keyframes fadein
+	from
+	opacity: 0
+
+	to
+	opacity: 1
+
+/* Opera < 12.1
+@-o-keyframes fadein
+	from
+	opacity: 0
+
+	to
+	opacity: 1
+#fake-header-open
+	position: absolute
+	transition: 2s cubic-bezier(0.22, 0.44, 0, 1) all
+	transform: translateY(-150px) rotate(90deg)
+	left: 5px
+	top: 80px
+	z-index: 9998
+	text-transform: uppercase
+	// display: none
+	&.active
+		transform: translateY(0) rotate(90deg)
+	.open-button
+		user-select: none
+		cursor: pointer
+		font-weight: 600
+		font-size: 14px
+		padding: 5px 12px
+		background: #c7931c
+		color: #fff
+
+		position: relative
+		&:after
+			content: ''
+			height: calc(100% + 8px)
+			width: calc(100% + 8px)
+			position: absolute
+			border: 1px solid #c7931c
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+		&::before
+			content: ''
+			height: 1px
+			width: 60px
+			right: calc(100% + 5px)
+			top: 50%
+			position: absolute
+			transform: translateY(-50%)  rotate(0)
+			border-top: 1px solid #c7931c
+	// &.last
+	// 	.open-button
+	// 		background:#c7931c
+	// 		color: #fff
+	// 		&:after
+	// 			border-color:#c7931c
+	// 		&:before
+	// 			border-color:#c7931c
+@media (max-width: 1025px)
+	#fake-header-open
+		position: fixed
+		// transform: translateY(-150px) rotate(90deg)
+		// display: none
+		right: 0
+		.open-button
+			background: #c7931c
+			color: #fff
+			&:after
+				border-color: #c7931c
+			&:before
+				border-color: #c7931c
+	#fake-header
+		.close-button
+			right: -10px
+			top: 25px
+		ul
+			a
+				font-size: 16px

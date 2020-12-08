@@ -5,6 +5,15 @@ block var
 	- var bodyClass = 'homepage overflow-hidden'
 
 block main
+	#fake-header
+		.close-button
+			em.lnr.lnr-cross
+			span Close
+		.menu-fake-header
+		.logo-fake-header
+	#fake-header-open
+		.open-button
+			span Menu
 	.full-page
 		include ../components/home/home-1.pug
-		include ../components/home/home-1.pug
+		include ../components/home/home-2.pug
