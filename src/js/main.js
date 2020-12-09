@@ -339,7 +339,49 @@ function listBanerSlide() {
 			crossFade: true,
 		},
 	});
+	$(".single-swiper .swiper-container").each(function (index, element) {
+		var $this = $(this);
+		$this.addClass("instance-" + index);
+		$this.parent().find(".swiper-button-prev").addClass("swiper-button-prev-" + index);
+		$this.parent().find(".swiper-button-next").addClass("swiper-button-next-" + index);
+		var swiper = new Swiper(".instance-" + index, {
+			speed: 750,
+			observer: true,
+			observeParents: true,
+			lazy: true,
+			breakpointsInverse: true,
+			spaceBetween: 30,
+			slidesPerView: 3,
+			loop: true,
+			initialSlide: 3,
+			watchOverflow: true,
+			centeredSlides: true,
+			navigation: {
+				nextEl: ".swiper-button-next-" + index,
+				prevEl: ".swiper-button-prev-" + index
+			},
+			breakpoints: {
+				1200: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				991: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				575: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				375: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+			},
+		});
+	});
 }
+
 function menuFake() {
 	let menuleft = $("header .main-nav .left-nav .navbar-nav .nav-item");
 	let menuright = $("header .main-nav .right-nav .navbar-nav .nav-item");
@@ -349,26 +391,26 @@ function menuFake() {
 }
 
 function tabs() {
-  $(".tabs > li").on("click", function () {
-    var $panel = $(this).closest(".tab-panels");
-    $panel.find("li.active").removeClass("active");
-    $(this).addClass("active");
-    var panelToShow = $(this).attr("rel");
-    $panel.find(".panel.active").fadeOut(300, showNextPanel);
+	$(".tabs > li").on("click", function () {
+		var $panel = $(this).closest(".tab-panels");
+		$panel.find("li.active").removeClass("active");
+		$(this).addClass("active");
+		var panelToShow = $(this).attr("rel");
+		$panel.find(".panel.active").fadeOut(300, showNextPanel);
 
-    function showNextPanel() {
-      $(this).removeClass("active");
-      $("#" + panelToShow).fadeIn(300, function () {
-        $(this).addClass("active").fadeIn(300);
-      });
-    }
-  });
-  if ($(window).width() < 992 && ".category-nav".length >= 1) {
-    $(".category-nav").on("click", function () {
-      $(this).find(".material-icons").toggleClass("active");
-      $(this).siblings(".tabs, .filter-content").slideToggle("slow");
-    });
-  }
+		function showNextPanel() {
+			$(this).removeClass("active");
+			$("#" + panelToShow).fadeIn(300, function () {
+				$(this).addClass("active").fadeIn(300);
+			});
+		}
+	});
+	if ($(window).width() < 992 && ".category-nav".length >= 1) {
+		$(".category-nav").on("click", function () {
+			$(this).find(".material-icons").toggleClass("active");
+			$(this).siblings(".tabs, .filter-content").slideToggle("slow");
+		});
+	}
 }
 $(document).ready(function () {
 	srcollHeaderChild()
