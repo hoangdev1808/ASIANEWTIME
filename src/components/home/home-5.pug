@@ -1,0 +1,36 @@
+section.home-page-5.kv-section(setBackground='../img/index/bg-home-5.png')
+	.container
+		.main-title.text-white tuyển dụng
+		.row
+			.col-lg-4
+				.item-career.zoom-img
+					.item-title.text-white.f-24.text-uppercase Chính sách nhân sự
+					.item-img
+						a(href="")
+							img.lazyload(data-src="./img/index/career-1.png", alt="")
+					.item-desc
+						.text.f-18.text-white Trong ngôi nhà của đại gia đình Asia New Time, tất cả thành viên luôn được tôn trọng, lắng nghe và chia sẻ.
+				a.btn.btn-view-more(href="") Xem chi tiết
+			.col-lg-4
+				.item-career.zoom-img
+					.item-title.text-white.f-24.text-uppercase Cơ hội nghề nghiệp
+					.item-img
+						a(href="")
+							img.lazyload(data-src="./img/index/career-2.png", alt="")
+					.item-desc
+						.text.f-18.text-white Asia New Time quan niệm đào tạo và phát triển nguồn nhân lực là chiến lược đầu tư cho sự thành công trong tương lai của công ty.
+				a.btn.btn-view-more(href="") Tìm hiểu cơ hội việc làm ngay
+			.col-lg-4
+				.item-career
+					.item-title.text-white.f-24.text-uppercase văn hoá asia new time
+					-for(i=3; i<7; i++)
+						.item-inner.zoom-img
+							.item-img
+								a(href="")
+									img.lazyload(data-src="./img/index/career-"+i+".png", alt="")
+							.item-desc
+								a.text.f-16.lcl.lcl-3(href="") Kiều Duyên - Minh chứng của câu nói “Có công mài sắt, có ngày nên kim”
+								a.view-more.f-12(href="") Xem chi tiết
+				a.btn.btn-view-more(href="") Xem tất cả
+
+
