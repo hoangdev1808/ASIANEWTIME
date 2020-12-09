@@ -1,16 +1,16 @@
-section.kv-section.home-page-2(setBackground='../img/index/bg-home-3.png')
+section.kv-section.home-page-3(setBackground='../img/index/bg-home-3.png')
 	.container
 		.zone-section
-			.main-title dự án
-			.zone-desc Mong muốn mang lại giá trị tư vấn - đầu tư phát triển bền vững cho thị trường bất động sản Việt Nam với những sản phẩm chất lượng từ những dự án mà chúng tôi mang đến.
-		.zone-content
+			.main-title.text-center.color-title dự án
+			.zone-desc.f-18 Mong muốn mang lại giá trị tư vấn - đầu tư phát triển bền vững cho thị trường bất động sản Việt Nam với những sản phẩm chất lượng từ những dự án mà chúng tôi mang đến.
+		.zone-wrapper
 			.tab-panels
-				.category-nav Danh mục
-					em.ri-arrow-down-s-line
-				ul.tabs
-					li.active(rel='panel-1') Đang triển khai
-					li(rel='panel-2') Đã triển khai
-					li(rel='panel-3') Resale
+				//- .category-nav Danh mục
+				//- 	em.ri-arrow-down-s-line
+				ul.tabs.justify-center
+					li.item.f-16(rel='panel-1') Đang triển khai
+					li.item.f-16.active(rel='panel-2') Đã triển khai
+					li.item.f-16(rel='panel-3') Resale
 				#panel-1.panel.active
 					.kv-slide
 						.swiper-container

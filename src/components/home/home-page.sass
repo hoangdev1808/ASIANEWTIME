@@ -33,3 +33,47 @@
 			padding-top: 30px
 		.btn-view-more
 			margin-top: 40px
+.home-page-3
+	.zone-section
+		width: 100%
+		.main-title
+			margin-bottom: 15px
+			&::after
+				left: 50%
+				transform: translateX(-50%)
+		.zone-desc
+			max-width: 841px
+			margin: 0 auto
+			color: $title
+			font-weight: 400
+			line-height: 24px
+			text-align: center
+	.zone-wrapper
+		padding-top: 30px
+		.tab-panels
+			.tabs
+				position: relative
+				max-width: 540px
+				margin: 0 auto
+				padding-bottom: 20px
+				.item
+					margin-right: 60px
+					position: relative
+					&::after
+						position: absolute
+						top: 85%
+						left: 50%
+						transform: translateX(-50%)
+						content: ''
+						width: 15px
+						height: 15px
+						border-radius: 50%
+						border: 2px solid #6d6e70
+						z-index: 2
+					&:last-child
+						margin-right: 0
+				&::after
+					position: absolute
+					top: 50%
+					left: 0
+					content: url('../img/icons/dotted.png')

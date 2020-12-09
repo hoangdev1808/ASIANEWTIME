@@ -1,9 +1,61 @@
 .nav-link
 	padding: .5rem 0
+
 .ovh
 	width: 100%
 	height: 100%
 	object-fit: cover
 	overflow: hidden
+
 .color-white
 	color: $white
+
+.lcl
+	overflow: hidden
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-box-orient: vertical
+
+	&-1
+		-webkit-line-clamp: 1
+
+	&-2
+		-webkit-line-clamp: 2
+
+	&-3
+		-webkit-line-clamp: 3
+
+	&-4
+		-webkit-line-clamp: 4
+
+.tab-panels
+	.tabs
+		padding: 0
+		list-style: none
+		display: flex
+		align-items: center
+
+		.item
+			cursor: pointer
+			margin-right: auto
+			padding: .9rem 0
+			color: $gray
+			&::after
+				background-color: #ffffff
+			&:last-child
+				margin-right: 0
+			&.active
+				font-weight: 700
+				color: $title
+				transition: all .3s ease-in-out
+				&::after
+					box-shadow: 5px -1px 15px rgba(0, 0, 0, 0.1)
+					background-color: #ffcb04
+					background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 203, 4, 0.5) 100%)
+
+	.panel
+		display: none
+		&.active
+			display: block
+		@media screen and ( max-width: 991px)
+			margin-top: .9rem
