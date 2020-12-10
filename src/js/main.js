@@ -54,7 +54,11 @@ function nextItem() {
 	var $currentSlide = pageSlide.eq(currentSlideNumber);
 	$currentSlide.addClass('current-page')
 	$previousSlide.removeClass("up-scroll").addClass("down-scroll");
-	$('header').addClass('active')
+	if ($('.full-page').length >= 1) {
+		$('header').addClass('active')
+	} else {
+		$('header').removeClass('active')
+	}
 	$('#fake-header-open').addClass('active')
 	$('header .search-wrapper').removeClass('active')
 	$('#back-to-top, #facebook').addClass('active')
@@ -385,11 +389,9 @@ function menuFake() {
 	let menuleft = $("header .main-nav .left-nav .navbar-nav .nav-item");
 	let menuright = $("header .main-nav .right-nav .navbar-nav .nav-item");
 	let footer = $('footer');
-	if ($('.full-page').length >= 1) {
-		menuleft.clone().appendTo("#fake-header .menu-fake-header");
-		menuright.clone().appendTo("#fake-header .menu-fake-header");
-		footer.clone().appendTo('.full-page .home-page-6 .home-footer');
-	}
+	menuleft.clone().appendTo("#fake-header .menu-fake-header");
+	menuright.clone().appendTo("#fake-header .menu-fake-header");
+	footer.clone().appendTo('.full-page .home-page-6 .home-footer');
 }
 
 function tabs() {
