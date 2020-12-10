@@ -1,0 +1,37 @@
+section.home-page-6.kv-section(data-title='đối tác')
+	.home-partner(setBackground='../img/index/bg-home-6.png')
+		.container
+			.list-partners
+				.row
+					.col-lg-2
+						.col-title-partner.d-flex.align-center
+							.title.text-white.f-24.text-uppercase.fw-700 đối tác
+					.col-lg-10
+						.col-list-pertner.d-flex.align-center
+							-for(i=1; i<5; i++)
+								.col.item-partner.d-flex.align-center.justify-center
+									.item-img
+										img.transition.lazyload(data-src="./img/index/partner-"+i+".png", alt="")
+			.list-partners
+				.row
+					.col-lg-2
+						.col-title-partner.d-flex.align-center
+							.title.text-white.f-24.text-uppercase.fw-700 ngân hàng liên kết
+					.col-lg-10
+						.col-list-pertner.d-flex.align-center
+							-for(i=5; i<10; i++)
+								.col.item-partner.d-flex.align-center.justify-center
+									.item-img
+										img.transition.lazyload(data-src="./img/index/partner-"+i+".png", alt="")
+			.list-partners
+				.row
+					.col-lg-2
+						.col-title-partner.d-flex.align-center
+							.title.text-white.f-24.text-uppercase.fw-700 dự án
+					.col-lg-10
+						.col-list-pertner.d-flex.align-center
+							-for(i=10; i<16; i++)
+								.col.item-partner.d-flex.align-center.justify-center
+									.item-img
+										img.transition.lazyload(data-src="./img/index/partner-"+i+".png", alt="")
+	.home-footer
