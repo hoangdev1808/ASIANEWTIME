@@ -1,0 +1,25 @@
+#tool-wrapper
+	position: fixed
+	top: 50%
+	left: 130px
+	transform: translateY(-50%)
+	z-index: 1000
+	ul
+		list-style: none
+		padding: 0
+		li
+			width: 44px
+			height: 44px
+			box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1)
+			border-radius: 50%
+			background-color: #6d6e70
+			margin-bottom: 10px
+			display: flex
+			align-items: center
+			justify-content: center
+			transition: all 1s cubic-bezier(.22, .44, 0, 1)
+			a
+				padding: .5rem
+			&:hover
+				box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1)
+				background-color: $main

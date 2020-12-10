@@ -43,9 +43,18 @@ footer
 						font-weight: 700
 						line-height: 24px
 	.footer-bottom
-		padding-top: 35px
-		margin-bottom: 40px
+		.col-lg-3
+			border-right: solid 1px #cccccc
+			&:first-child
+				.footer-item
+					padding-left: 0
+			&:last-child
+				border: none
 		.footer-item
+			width: 100%
+			height: 100%
+			padding-top: 35px
+			padding-left: 15px	
 			.item-header
 				position: relative
 				padding-top: 16px

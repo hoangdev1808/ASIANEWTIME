@@ -57,6 +57,7 @@ function nextItem() {
 	$('header').addClass('active')
 	$('#fake-header-open').addClass('active')
 	$('header .search-wrapper').removeClass('active')
+	$('#back-to-top, #facebook').addClass('active')
 	if ($currentSlide.is(':first-child')) {
 		$('#fake-header').removeClass('active');
 	}
@@ -81,14 +82,12 @@ function previousItem() {
 	var $currentSlide = pageSlide.eq(currentSlideNumber);
 	$currentSlide.addClass('current-page')
 	$('#fake-header-open').removeClass('last')
-	$('.back-to-top').addClass('active')
-	$('.back-to-home').addClass('active')
+	$('#back-to-top, #facebook').addClass('active')
 	if ($currentSlide.is(':first-child')) {
 		$('header').removeClass('active')
-		$('.back-to-top').removeClass('active')
-		$('.back-to-home').removeClass('active')
 		$('#fake-header-open').removeClass('active')
 		$('#fake-header').removeClass('active');
+		$('#back-to-top, #facebook').removeClass('active')
 	}
 	if (currentSlideNumber == 1) {
 		$('#fake-header-open').addClass('last')
@@ -385,9 +384,12 @@ function listBanerSlide() {
 function menuFake() {
 	let menuleft = $("header .main-nav .left-nav .navbar-nav .nav-item");
 	let menuright = $("header .main-nav .right-nav .navbar-nav .nav-item");
-
-	menuleft.clone().appendTo("#fake-header .menu-fake-header");
-	menuright.clone().appendTo("#fake-header .menu-fake-header");
+	let footer = $('footer');
+	if ($('.full-page').length >= 1) {
+		menuleft.clone().appendTo("#fake-header .menu-fake-header");
+		menuright.clone().appendTo("#fake-header .menu-fake-header");
+		footer.clone().appendTo('.full-page .home-page-6 .home-footer');
+	}
 }
 
 function tabs() {
