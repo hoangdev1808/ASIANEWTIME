@@ -1,33 +1,31 @@
 ol.breadcrumb
 	display: flex
-	padding: 10px 0
 	align-items: center
 	list-style: none
-	padding-left: 0
-	border-bottom: 1px solid #e1e1e1
+	padding: 17px 6px
+
 	li
 		display: flex
 		position: relative
 		align-items: center
 		padding: 0 10px
 		a
-			color: #999999
+			color: white
 			font-weight: 400
 			font-size: r(15px)
-			text-transform: uppercase
 			&.active
-				color: #999999
+				color: white
 		&:first-child
 			padding-left: 0
 			// font-size: 0
-			a 
+			a
 				font-size: 0
 
 				&::before
 					font-family: remixicon!important
-					content: '\EE1C'
+					content: "\ee22"
 					font-size: r(18px)
-					color: #999999
+					color: white
 		+ li
 			&::before
 				font-family: remixicon!important
@@ -36,5 +34,5 @@ ol.breadcrumb
 				transform: translateY(-50%)
 				left: -9px
 				position: absolute
-				color: #999999
+				color: white
 				font-size: r(20px)
