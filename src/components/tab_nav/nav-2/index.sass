@@ -1,0 +1,47 @@
+.nav-2
+	width: 100%
+	margin-top: 60px
+	margin-bottom: 40px
+	.list-nav
+		display: flex
+		align-items: center
+		justify-content: center
+		@media screen and ( max-width: 575px )
+			margin: 0 15px
+			justify-content: space-between
+		li
+			&.active
+				a
+					background-color: #ffcc00
+					background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 203, 4, 0.5) 100%)
+					border: 0px solid transparent
+			&+li
+				margin-left: 30px
+			@media screen and ( max-width: 575px )
+				flex: 0 0 45%
+
+			a
+				height: 50px
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+				border-radius: 25px
+				border: 1px solid #08293c
+				color: #08293c
+				font-size: r(18px)
+				font-weight: 700
+				text-transform: uppercase
+				letter-spacing: 0.45px
+				display: flex
+				align-items: center
+				justify-content: center
+				padding: 0 34px
+				white-space: nowrap
+				@media screen and ( max-width: 575px )
+					padding: 0
+					width: 100%
+				@media screen and ( max-width: 400px )
+					font-size: r(14px)
+					height: 40px
+
+
+
+

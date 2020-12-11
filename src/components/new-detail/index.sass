@@ -1,0 +1,67 @@
+.new-detail
+	.main-content
+		max-width: 1020px
+		margin: 0 auto
+		padding-top: 29px
+	.header-content
+		border-bottom: 1px solid #d5d5d5
+		padding-bottom: 10px
+		.title
+			color: #0a0a0a
+			font-size: r(30px)
+			font-weight: 700
+			@media screen and ( max-width: 575px )
+				font-size: 1.5rem
+		.date
+			color: #666666
+			font-size: r(14px)
+			font-weight: 300
+			letter-spacing: 0.7px
+		.wrap-sub
+			justify-content: space-between
+			display: flex
+			align-items: flex-end
+		.wrap-social
+			display: flex
+			align-items: center
+			a
+				display: block
+				width: 31px
+				height: 31px
+				border: 1px solid #999999
+				border-radius: 50%
+				display: flex
+				align-items: center
+				justify-content: center
+				transition: .3s all  ease-in-out
+				&+a
+					margin-left: 10px
+				&:hover
+					background-color: #08293c
+					em
+						color: $main
+			em
+				color: #999999
+	.content
+		padding-bottom: 40px
+		p
+			margin-top: 30px
+			color: #333333
+			font-size: 1rem
+			font-weight: 400
+			line-height: 24px
+			letter-spacing: 0.4px
+	.wrap-list-tin
+		border-top: 1px solid #d5d5d5
+		padding-top: 39px
+		.title-list
+			color: #08293c
+			font-size: r(24px)
+			font-weight: 700
+			+under-line(#08293c)
+			margin-bottom: 30px
+		.title
+			p
+				color: #08293c
+				font-size: 1rem
+				font-weight: 400!important

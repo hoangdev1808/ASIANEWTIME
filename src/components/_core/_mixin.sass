@@ -44,6 +44,18 @@
 	text-overflow: ellipsis
 	-webkit-line-clamp: $line
 	-webkit-box-orient: vertical
+=under-line($color)
+	position: relative
+	padding-bottom: 13px
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		width: 50px
+		height: 1px
+		background-color: $color
+		left: 0px
+
 =img-ratio($ratio,$fit:cover)
 	position: relative
 	display: block

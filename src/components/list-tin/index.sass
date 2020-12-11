@@ -1,0 +1,84 @@
+.list-tin
+.wrap-list-tin
+	.title
+		*
+			color: #08293c
+			font-size: 16px
+			font-weight: 800
+			line-height: 20px
+			+rgtext(2)
+	.date
+		color: #111111
+		font-size: 13px
+		font-weight: 600
+		letter-spacing: 1.3px
+		width: 24px
+		height: 96px
+		background-color: rgba($main, 0.9)
+		display: flex
+		writing-mode: vertical-lr
+		justify-content: center
+		transform: rotate(180deg)
+		opacity: 0.9
+	.box-post-big
+		margin-bottom: 30px
+		position: relative
+		display: block
+		&:hover
+			.title
+				transition: .3s all  ease-in-out
+				background-color: #ffcc00
+				background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 204, 0, 0.5) 100%)
+				opacity: 0.9
+		.img
+			+img-ratio(370/600)
+		.title
+			height: 60px
+			background-color: $white
+			position: absolute
+			bottom: 0
+			width: 100%
+			display: flex
+			align-items: center
+			padding-left: 21px
+			padding-right: 21px
+			box-shadow: 0 5px 50px rgba(0, 0, 0, 0.05)
+			left: 0
+			transition: .3s all  ease-in-out
+		.date
+			position: absolute
+			right: 0
+			bottom: 60px
+			transition: .3s all  ease-in-out
+	.box-post-small
+		margin-bottom: 30px
+		position: relative
+		display: block
+		&:hover
+			.title
+				transition: .3s all  ease-in-out
+				background-color: #ffcc00
+				background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 204, 0, 0.5) 100%)
+				opacity: 0.9
+		.img
+			+img-ratio(239/285)
+			// @media screen and ( max-width: 575px )
+			// 	+img-ratio(0.6)
+		.title
+			height: 70px
+			background-color: $white
+			position: absolute
+			bottom: 0
+			width: 100%
+			display: flex
+			align-items: center
+			padding-left: 21px
+			padding-right: 21px
+			box-shadow: 0 5px 50px rgba(0, 0, 0, 0.05)
+			left: 0
+			transition: .3s all  ease-in-out
+		.date
+			position: absolute
+			right: 0
+			bottom: 70px
+			transition: .3s all  ease-in-out

@@ -5,12 +5,15 @@
 		align-items: center
 		justify-content: center
 		li
+			flex: 0 0 230px
+			@media screen and ( max-width: 575px )
+				flex: 0 0 50%
 			&.active
 				a
 					background-color: $main
 			a
-				min-width: 230px
 				height: 60px
+				width: 100%
 				background-color: $bg_color
 				display: flex
 				align-items: center
@@ -18,3 +21,4 @@
 				color: #08293c
 				font-size: 14px
 				font-weight: 700
+

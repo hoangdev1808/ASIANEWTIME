@@ -1,0 +1,28 @@
+section.list-tin.main-section-bottom
+	include ../tab_nav/nav-2/index.pug
+	.wrap-list-tin
+		.container
+			.row
+				-for(i=0;i<2;i++)
+					.col-lg-6
+						a(href="").box-post-big.zoom-img
+							.img
+								img(data-src="./img/news/new-1.png" class="lazyload" alt="")
+							.title
+								p Pháp lý minh bạch giúp Nhơn Hội New City hút khách
+							.date 15.09.2020
+				-for(i=0;i<8;i++)
+					.col-lg-3.col-md-6
+						a(href="").box-post-small.zoom-img
+							.img
+								img(data-src="./img/news/new-small.png" class="lazyload" alt="")
+							.title
+								p Đất nền ven biển miền Trung sẽ ra sao trong năm 2020?
+							.date 15.09.2020
+			ul.pagination-2
+				li.active
+					a(href="") 1
+				li
+					a(href="") 2
+				li
+					a(href="") 3
