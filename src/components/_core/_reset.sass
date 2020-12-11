@@ -6,7 +6,7 @@ html
 	-webkit-text-size-adjust: 100%
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 	scroll-behavior: smooth
-	
+
 body
 	font-weight: 400
 	line-height: 1.5
@@ -14,8 +14,14 @@ body
 	color: $gray
 	margin: 0
 	margin: 0
-body, html 
-	font-size: 16px
+body, html
+	font-size: 13px
+	@media ( min-width: 575px )
+		font-size: 14px
+	@media(min-width: 1024px)
+		font-size: 15px
+	@media(min-width: 1280px)
+		font-size: 16px
 
 *
 	box-sizing: border-box
@@ -94,7 +100,7 @@ a
 	font-size: inherit
 	font-weight: inherit
 	color: inherit
-	
+
 
 a:not([href]):not([tabindex])
 	color: inherit
@@ -235,9 +241,9 @@ template
 	display: none !important
 
 input, button, a, .button-prev, .button-next, textarea, select
-	&:focus 
-		outline: none 
+	&:focus
+		outline: none
 
-img 
+img
 	max-width: 100%
-	height: auto 
+	height: auto

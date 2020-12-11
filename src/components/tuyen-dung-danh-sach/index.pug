@@ -1,0 +1,41 @@
+section.tuyen-dung-ds.main-section-bottom
+	.container
+		-for(i=0;i<4;i++)
+			.wrap-post
+				.row
+					.col-lg-6
+						.img
+							img(data-src="./img/tuyen-dung-sa/tdds-1.png" alt="" class="lazyload")
+					.col-lg-6
+						.text
+							h2.main-title.color-title Môi trường làm việc
+							.des
+								p
+									| Trong ngôi nhà của đại gia đình Asia New Time, tất cả thành viên luôn được tôn trọng, lắng nghe và chia sẻ. Mọi nỗ lực và thành quả của các bạn đều được chúng tôi ghi nhận và khen thưởng công bằng vì mỗi bạn là một mắt xích quan trọng, đóng góp vào thành công chung của Asia New Time.
+		.list-tuyen-dung
+			h2.main-title.center.color-title Vị trí tuyển dụng
+			.wrap-list-td
+				.row
+					-for(i=0;i<8;i++)
+						.col-lg-6
+							a(href="").box-td
+								p.title Biên phiên dịch tiếng Nhật
+								p.location
+									em.ri-map-pin-2-fill
+									|Ho Chi Minh City
+								.wrap-end
+									.wrap-md
+										p.money
+											em.mdi.mdi-currency-usd
+											| 500 - 1.000 USD
+										p.date
+											em.ri-calendar-check-fill
+											| 10/02/2020
+									p.xemthem Xem thêm
+		ul.pagination-2
+			li.active
+				a(href="") 1
+			li
+				a(href="") 2
+			li
+				a(href="") 3
