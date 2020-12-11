@@ -1,0 +1,680 @@
+.product-review .comment-form .btnShare {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	min-width: 90px;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 34px;
+	background: #dadcdf !important;
+	border-radius: 17px;
+	font-size: .875rem;
+	font-weight: 700;
+}
+
+.product-review .medium-title {
+	font-size: 1rem;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.product-review {
+	display: -moz-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	max-width: 100%;
+	width: 100%;
+	margin: 0 0 10px;
+}
+
+@media (max-width: 991.98px) {
+	.product-review {
+		max-width: 100%;
+	}
+}
+
+.product-review .medium-rating {
+	text-align: center;
+	padding-right: 25px;
+	margin-right: 25px;
+	border-right: 1px solid #e1e1e1;
+}
+
+@media (max-width: 767.98px) {
+	.product-review .medium-rating {
+		width: 100%;
+		padding-right: 0;
+		margin-bottom: 20px;
+		text-align: left;
+		margin-right: 0;
+		border-right: 0;
+	}
+
+
+}
+
+.product-review .medium-rating .point {
+	font-size: 3rem;
+	font-weight: 700;
+	color: #ec5993;
+	line-height: 1;
+	margin-bottom: 5px;
+}
+
+@media (max-width: 767.98px) {
+	.product-review .medium-rating .point {
+		font-size: 1.375rem;
+	}
+}
+
+.product-review .medium-rating ul.stars {
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.product-review .medium-rating ul.stars li {
+	display: inline-block;
+	color: #CCCCCC;
+}
+
+@media (max-width: 767.98px) {
+	.product-review .medium-rating ul.stars li {
+		font-size: 0.8125rem;
+	}
+}
+
+.product-review .medium-rating ul.stars li+li {
+	margin-left: 5px;
+}
+
+@media (max-width: 767.98px) {
+	.product-review .medium-rating ul.stars li+li {
+		margin-left: 0;
+	}
+
+	.start-overview {
+		margin-bottom: 20px;
+	}
+
+
+}
+
+.product-review .medium-rating ul.stars li.active {
+	color: #FFC107;
+}
+
+.product-review .medium-rating .total-comment {
+	font-size: 0.8125rem;
+	color: gray;
+	margin-top: 10px;
+}
+
+.product-review .start-overview {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.product-review .start-overview ul li {
+	display: -moz-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	color: #666666;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 767.98px) {
+	.product-review .start-overview ul li {
+		font-size: 0.8125rem;
+		margin-bottom: 0;
+	}
+
+	.product-review .start-overview ul li+li {
+		margin-top: 10px;
+	}
+}
+
+.product-review .start-overview ul li label {
+	width: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.product-review .start-overview ul li label i {
+	color: #b3b3b3;
+	margin-left: 5px;
+}
+
+.product-review .start-overview ul li .progress {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	height: 10px;
+	border-radius: 50px;
+	overflow: hidden;
+	background: #eeeeee;
+}
+
+.product-review .start-overview ul li .progress .progress-bar {
+	background: -webkit-gradient(linear, left top, right top, from(#f05a94), to(#bc0049));
+	background: -o-linear-gradient(left, #f05a94, #bc0049);
+	background: linear-gradient(90deg, #f05a94, #bc0049);
+	border-radius: 50px;
+	height: 100%;
+}
+
+.product-review .start-overview ul li .percent {
+	width: 60px;
+	padding-left: 10px;
+	color: #007ff0;
+	font-weight: 700;
+	text-align: right;
+}
+
+.comment-form-bottom {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 12px 20px;
+	border-top: 1px solid #e6e6e6;
+}
+
+.comment-form-bottom .form-group {
+	margin-bottom: 0 !important;
+}
+
+.comment-form-bottom>* {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+}
+
+.comment-form-bottom>*:not(:last-child) {
+	margin-right: 20px;
+}
+
+@media (max-width: 768.98px) {
+	.comment-form-bottom {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+
+	.comment-form-bottom>* {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		margin-right: 0 !important;
+	}
+
+	.comment-form-bottom>*+* {
+		margin-top: 15px;
+	}
+}
+
+.rating-wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.rating-wrap span {
+	margin-right: 10px;
+}
+
+.product-review .btn-wrap {
+	margin-left: 20px;
+	padding-left: 20px;
+	border-left: 1px solid #e1e1e1;
+	width: 150px;
+	text-align: center;
+}
+
+.product-review .btn-wrap p {
+	text-align: center;
+}
+
+.product-review .btn-wrap .btn-comment {
+	border-radius: 1.25rem;
+	width: 8.125rem;
+	height: 2.5rem;
+	background-image: linear-gradient(90deg, #f05a94, #bc0049);
+	color: #fff;
+	font-size: .875rem;
+	background-image: -webkit-gradient(linear, left top, right top, from(#f05a94), to(#bc0049));
+	background-image: -o-linear-gradient(left, #f05a94, #bc0049);
+}
+
+@media (max-width: 767.98px) {
+	.product-review .btn-wrap {
+		padding-left: 0;
+		width: 100%;
+		margin-left: 0;
+		border-left: 0;
+	}
+}
+
+.product-review .btn-wrap .btn-comment {
+	margin-top: 10px;
+}
+
+.product-review .comment-form {
+	width: 100%;
+	margin-top: 10px;
+	display: none;
+}
+
+.comment-form .form-wrap {
+	border: 1px solid #e6e6e6;
+	border-radius: 5px;
+}
+
+@media (max-width: 767.98px) {
+	.product-review .comment-form {
+		padding-left: 0;
+	}
+}
+
+.product-review .comment-form .module-title {
+	font-weight: 500;
+	margin-bottom: 1.25rem;
+}
+
+.product-review .comment-form .form-group.rating {
+	display: -moz-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+}
+
+.product-review .comment-form .form-group.rating label {
+	width: auto;
+}
+
+.product-review .comment-form .form-group.rating .rating-input ul {
+	display: -moz-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	margin-left: 10px;
+}
+
+.product-review .comment-form .form-group.rating .rating-input ul li+li {
+	margin-left: 5px;
+}
+
+.product-review .comment-form .form-group.rating .rating-input ul li a {
+	color: #b3b3b3;
+}
+
+.product-review .comment-form .form-group.rating .rating-input ul li a:hover {
+	color: #FFC107;
+}
+
+.product-review .comment-form .form-group.rating .rating-input ul li a.active {
+	color: #FFC107;
+}
+
+.product-review .comment-form .form-group.rating .rating-input ul li:hover a {
+	color: #FFC107;
+}
+
+.product-review .comment-form .form-group.rating .rating-input ul li.active a {
+	color: #FFC107;
+}
+
+.product-review .comment-form .btnShare,
+.product-review .comment-form input[type="submit"] {
+	width: auto;
+	padding: 0;
+	background: inherit;
+}
+
+.form-wrap .form-group,
+.journalEditor .form-group,
+.comment-list .sort .form-group {
+	margin-bottom: 10px;
+}
+
+.form-wrap label,
+.journalEditor label,
+.comment-list .sort label {
+	display: block;
+	font-size: 0.8125rem;
+	color: #333333;
+	padding: 5px 0;
+}
+
+.form-wrap input,
+.journalEditor input,
+.comment-list .sort input,
+.form-wrap select,
+.journalEditor select,
+.comment-list .sort select {
+	font-size: 0.8125rem;
+	padding: 8px 15px;
+	background: #f4f4f4;
+	width: 100%;
+	color: #333333;
+	-webkit-transition: all, 0.5s;
+	-o-transition: all, 0.5s;
+	transition: all, 0.5s;
+	height: 34px;
+	border-radius: 17px;
+	border: 0;
+}
+
+.form-wrap textarea {
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	height: 145px;
+}
+
+.form-wrap input::-webkit-input-placeholder,
+.journalEditor input::-webkit-input-placeholder,
+.comment-list .sort input::-webkit-input-placeholder,
+.form-wrap select::-webkit-input-placeholder,
+.journalEditor select::-webkit-input-placeholder,
+.comment-list .sort select::-webkit-input-placeholder,
+.form-wrap textarea::-webkit-input-placeholder,
+.journalEditor textarea::-webkit-input-placeholder,
+.comment-list .sort textarea::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 0.5;
+}
+
+.form-wrap input:active,
+.journalEditor input:active,
+.comment-list .sort input:active,
+.form-wrap input:focus,
+.journalEditor input:focus,
+.comment-list .sort input:focus,
+.form-wrap select:active,
+.journalEditor select:active,
+.comment-list .sort select:active,
+.form-wrap select:focus,
+.journalEditor select:focus,
+.comment-list .sort select:focus,
+.form-wrap textarea:active,
+.journalEditor textarea:active,
+.comment-list .sort textarea:active,
+.form-wrap textarea:focus,
+.journalEditor textarea:focus,
+.comment-list .sort textarea:focus {
+	border-color: #f9cd85;
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(245, 166, 35, 0.1);
+	box-shadow: 0 0 0 0.2rem rgba(245, 166, 35, 0.1);
+}
+
+.form-wrap ul.gender,
+.journalEditor ul.gender,
+.comment-list .sort ul.gender {
+	display: -moz-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+}
+
+.form-wrap ul.gender li label,
+.journalEditor ul.gender li label,
+.comment-list .sort ul.gender li label {
+	width: auto;
+}
+
+.form-wrap ul.gender li+li,
+.journalEditor ul.gender li+li,
+.comment-list .sort ul.gender li+li {
+	margin-left: 30px;
+}
+
+.form-wrap select,
+.journalEditor select,
+.comment-list .sort select {
+	padding: 9px 15px;
+}
+
+.form-wrap .form-des,
+.journalEditor .form-des,
+.comment-list .sort .form-des {
+	font-size: 0.8125rem;
+	color: #666666;
+	line-height: 1.3;
+}
+
+.form-wrap .form-des a:hover,
+.journalEditor .form-des a:hover,
+.comment-list .sort .form-des a:hover {
+	color: #F5A623;
+	text-decoration: underline;
+}
+
+.comment-list .progress {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 1rem;
+	overflow: hidden;
+	font-size: 0.75rem;
+	background-color: #e9ecef;
+	border-radius: 0.25rem;
+}
+
+.comment-list .progress-bar {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	background-color: #007bff;
+	-webkit-transition: width 0.6s ease;
+	-o-transition: width 0.6s ease;
+	transition: width 0.6s ease;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	.comment-list .progress-bar {
+		-webkit-transition: none;
+		-o-transition: none;
+		transition: none;
+	}
+}
+
+.progress-bar-striped {
+	background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-size: 1rem 1rem;
+}
+
+.progress-bar-animated {
+	-webkit-animation: progress-bar-stripes 1s linear infinite;
+	animation: progress-bar-stripes 1s linear infinite;
+}
+
+.comment-list {
+	border-top: 1px solid #f2f2f2;
+	margin-top: 30px;
+	padding-top: 30px;
+}
+
+@media (max-width: 991.98px) {
+	.comment-list {
+		max-width: 100%;
+	}
+}
+
+.comment-list .sort {
+	display: -moz-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	max-width: 300px;
+}
+
+.comment-list .sort label {
+	width: auto;
+	padding-right: 10px;
+}
+
+.comment-list .sort select {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.comment-list .comment-items .item {
+	display: -moz-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 20px 0;
+	border-top: 1px dashed #eeeeee;
+}
+
+.comment-list .comment-items .item:first-child {
+	padding-top: 0;
+	border-top: 0;
+}
+
+.comment-list .comment-items .item .user {
+	width: 70px;
+	text-align: center;
+}
+
+.comment-list .comment-items .item .user .img {
+	width: 70px;
+	height: 70px;
+	margin-bottom: 10px;
+}
+
+.comment-list .comment-items .item .user .img img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.comment-list .comment-items .item .user .name {
+	font-size: 1rem;
+	line-height: 1;
+	font-weight: 700;
+	white-space: nowrap;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+
+.comment-list .comment-items .item .user time {
+	font-size: 0.6875rem;
+	color: gray;
+}
+
+.comment-list .comment-items .item .caption {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	padding-left: 20px;
+}
+
+.comment-list .comment-items .item .caption .rating {
+	margin: 5px 0;
+}
+
+.comment-list .comment-items .item .caption .rating ul {
+	display: -moz-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+}
+
+.comment-list .comment-items .item .caption .rating ul li {
+	font-size: 0.8125rem;
+	color: #cccccc;
+}
+
+.comment-list .comment-items .item .caption .rating ul li+li {
+	margin-left: 5px;
+}
+
+.comment-list .comment-items .item .caption .rating ul li.active {
+	color: #FFC107;
+}
+
+.comment-list .comment-items .item .caption .name {
+	color: #223771;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.comment-list .comment-items .item .caption .mod {
+	margin-bottom: 5px;
+	font-weight: normal;
+	color: #999;
+}
+
+.comment-list .comment-items .item .caption .des {
+	margin: 10px 0;
+	line-height: 1.375;
+}
+
+.comment-list .comment-items .item .caption time {
+	color: #999999;
+	font-size: 14px;
+}
+
+.comment-list .comment-items .item .caption .sharelink {
+	font-size: 0.8125rem;
+	color: #FFC107;
+}

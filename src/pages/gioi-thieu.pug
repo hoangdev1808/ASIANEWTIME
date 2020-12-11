@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'Giới thiệu'
+	- var bodyClass = 'aboutpage overflow-hidden'
+
+block main
+	include ../components/banner/pagebanner.pug
+	include ../components/about/about-1.pug
+	include ../components/about/about-2.pug
+	include ../components/about/about-3.pug

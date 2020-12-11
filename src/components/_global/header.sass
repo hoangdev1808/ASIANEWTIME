@@ -6,12 +6,13 @@ header
 	transform: translateY(0)
 	background-color: $white
 	z-index: 1000
-	transition: all 1s cubic-bezier(.22, .44, 0, 1)
+	transition: all .5s cubic-bezier(.22, .44, 0, 1)
 	.main-nav
 		width: 100%
 		.navbar-collapse
 			width: 50%
 			padding-right: 135px
+			transition: all .5s cubic-bezier(.22, .44, 0, 1)
 			.navbar-nav
 				width: 100%
 				list-style: none
@@ -59,6 +60,7 @@ header
 				padding-right: 0
 				padding-left: 135px
 		.navbar-brand
+			transition: all .5s cubic-bezier(.22, .44, 0, 1)
 			position: absolute
 			top: 0
 			left: 50%
@@ -120,3 +122,13 @@ header
 	&.active
 		transform: translateY(-100%)
 		transition: all 1s cubic-bezier(.22, .44, 0, 1)
+	&.active-scroll
+		height: 80px
+		.main-nav
+			.navbar-collapse
+				padding-right: 90px
+				&:nth-child(3)
+					padding-right: 0
+					padding-left: 90px
+			.navbar-brand
+				max-width: 120px
