@@ -1,0 +1,15 @@
+section#pro-detail-3.pro-detail-3.kv-section
+	.container
+		.main-title.fw-900.text-main.text-uppercase tiện ích
+		.swiper-column
+			.swiper-container
+				.swiper-wrapper
+					-for(i = 1; i < 7; i++)
+						.swiper-slide
+							.item-ult
+								.item-img
+									img.lazyload(data-src="./img/project/item-"+i+".png", alt="")
+								.item-content
+									.title Khu phức hợp thể thao nước hàng đầu gần 1 ha
+			.swiper-button-next
+			.swiper-button-prev

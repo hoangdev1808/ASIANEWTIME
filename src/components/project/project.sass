@@ -1,0 +1,98 @@
+.project-page
+	padding-top: 38px
+	.page-desc
+		max-width: 870px
+		margin-bottom: 30px
+	.zone-nav
+		position: relative
+		ul
+			list-style: none
+			li
+				position: relative
+				&:first-child
+					margin-right: 60px
+				&.active
+					a
+						font-weight: 700
+						color: $title
+					&::before
+						box-shadow: 5px -1px 15px rgba(0, 0, 0, 0.1)
+						background-color: #ffcb04
+						background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 203, 4, 0.5) 100%)
+				&::before
+					position: absolute
+					top: 127%
+					left: 50%
+					transform: translateX(-50%)
+					content: ''
+					width: 15px
+					height: 15px
+					border-radius: 50%
+					border: 2px solid #6d6e70
+					background-color: #ffffff
+					z-index: 2
+		&::after
+			position: absolute
+			z-index: 1
+			content: url('../img/icons/dotted.png')
+			top: 100%
+			left: 50%
+			transform: translateX(-50%)
+	.project-wrapper
+		margin-top: 45px
+		.list-project
+			margin-top: 60px
+			.item-img
+				width: 100%
+				a
+					position: relative
+					display: block
+					padding-top: 62.5%
+					img
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						min-height: 450px
+			.project-content
+				height: 100%
+				.main-title
+					margin-bottom: 30px
+				.desc
+					.text
+						margin-bottom: 20px
+					table
+						width: 100%
+						margin-bottom: 20px
+						border-top: solid 1px $title
+						tr
+							border-bottom: solid 1px #e1e1e1
+							td
+								&:first-child
+									padding-right: 20px
+									color: $title
+									line-height: 40px
+									font-size: 1rem
+									font-weight: 900
+								&:last-child
+									padding-left: 20px
+									font-size: 1rem
+									font-weight: 700
+									color: $title
+									line-height: 40px
+				.btn-view-more
+					width: max-content
+			&:nth-child(even)
+				.col-lg-7
+					order: 2
+					padding-right: 15px
+				.col-lg-5
+					order: 1
+					padding-left: 15px
+					.project-content
+						padding-right: 65px
+			&:nth-child(odd)
+				.col-lg-5
+					.project-content
+						padding-left: 75px

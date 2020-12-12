@@ -1,0 +1,33 @@
+section.project-page.kv-section
+	.container
+		.page-desc.f-18.text-main.text-center.mx-auto Mong muốn mang lại giá trị tư vấn - đầu tư phát triển bền vững cho thị trường bất động sản Việt Nam với những sản phẩm chất lượng từ những dự án mà chúng tôi mang đến.
+		.zone-nav.d-flex.align-center.justify-center
+			ul.d-flex.align-center.justify-center.p-0
+				li
+					a.f-18.fw-800.text-gray(href="") Đang triển khai
+				li.active
+					a.f-18.fw-800.text-gray(href="") Đã triển khai
+		.project-wrapper
+			-for(i=1; i<7; i++)
+				.list-project
+					.row
+						.col-lg-7.pr-0.zoom-img
+							.item-img
+								a(href="du-an-chi-tiet.html")
+									img.lazyload(data-src="./img/project/pro-"+i+".png", alt="")
+						.col-lg-5.pl-0
+							.project-content.d-flex.justify-center.flex-column
+								.main-title.fw-900.text-main.text-uppercase Kỳ Co Gateway
+								.desc
+									.text.fw-700.f-16.text-main.lcl.lcl-3 Tọa lạc tại Xã Sông Xoài, Tx Phú Mỹ, tỉnh Bà Rịa–Vũng Tàu. Đây là nơi có giao thông thuận lợi, khu vực ô bàn cờ xã Sông Xoài
+									table
+										tr
+											td Quy mô
+											td 5ha
+										tr
+											td Vị trí
+											td Xã Sông Xoài, Tx Phú Mỹ, Tỉnh BR - VT
+										tr
+											td Tiến độ
+											td Đã hoàn thành
+								a.btn.btn-view-more(href="du-an-chi-tiet.html") Xem tất cả
