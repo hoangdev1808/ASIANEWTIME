@@ -1,11 +1,12 @@
 var ticking = false;
 var isFirefox = (/Firefox/i.test(navigator.userAgent));
 var isIe = (/MSIE/i.test(navigator.userAgent)) || (/Trident.*rv\:11\./i.test(navigator.userAgent));
-var scrollSensitivitySetting = 30; 
-var slideDurationSetting = 600; 
+var scrollSensitivitySetting = 30;
+var slideDurationSetting = 600;
 var currentSlideNumber = 0;
 var pageSlide = $(".full-page section");
 var totalSlideNumber = pageSlide.length;
+
 function parallaxScroll(evt) {
 	let delta = 0
 	if (isFirefox) {
@@ -166,6 +167,7 @@ function createPagination() {
 		}
 	})
 }
+
 function toggleSearchWrapper() {
 	$(".header-icon .btn-search").on("click", function () {
 		$("header").find(".search-wrapper").toggleClass("active");
