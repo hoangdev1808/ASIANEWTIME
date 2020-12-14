@@ -10,7 +10,7 @@
 		"src/_plugins/Tabslet.js",
 		"bower_components/lazysizes/lazysizes.js",
 		"bower_components/fancybox/dist/jquery.fancybox.min.js",
-		"src/_plugins/fullpage.js"
+		"src/_plugins/mapping-listener.js"
 	],
 	"css": [
 		"src/_plugins/font.css",
