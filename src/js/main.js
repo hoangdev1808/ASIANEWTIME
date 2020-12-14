@@ -8,6 +8,7 @@ var slideDurationSetting = 600;
 var currentSlideNumber = 0;
 var pageSlide = $(".full-page section");
 var totalSlideNumber = pageSlide.length;
+
 function parallaxScroll(evt) {
 	let delta = 0;
 	if (isFirefox) {
@@ -197,6 +198,7 @@ function createPagination() {
 		}
 	});
 }
+
 function toggleSearchWrapper() {
 	$(".header-icon .btn-search").on("click", function () {
 		$("header").find(".search-wrapper").toggleClass("active");
