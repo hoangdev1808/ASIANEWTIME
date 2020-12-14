@@ -1,81 +1,12 @@
 .about-1
+	padding-top: 0
 	min-height: 750px
 	position: relative
-	.about-nav
-		position: absolute
-		top: 0
-		left: 50%
-		transform: translateX(-50%)
+	.zone-nav
 		max-width: 695px
-		&.scolled
-			position: fixed
-			z-index: 999
-			@media screen and ( max-width: 991px)
-				max-width: 80px
-				max-height: 60px
-				padding-left: 0
-				.box-category
-					p
-						font-size: 0
-					.material-icons
-						font-size: 30px
-				.categroly
-					ul
-						position: absolute
-						top: 0
-						left: 0
-						background-color: #f3f3f3
-						min-width: 250px
-		.categroly
-			ul
-				max-width: 100%
-				display: flex
-				list-style: none
-				align-items: center
-				padding-left: 0
-				margin: 0 auto
-				li
-					position: relative
-					width: 230px
-					height: 60px
-					margin-right: 1px
-					background-color: #f3f3f3
-					.nav-link
-						color: $title
-						line-height: 24px
-						text-align: center
-						min-width: 100%
-						padding: 1.1rem 0
-					&:first-child
-						margin-left: 0
-					&:last-child
-						margin-right: 0
-					&:hover,
-					&.active
-						background-color: $main
-
-			@media screen and ( max-width: 1280px)
-				ul
-					li
-						.nav-link
-							padding: .9rem
-							font-size: .6rem
-			@media screen and ( max-width: 1199px)
-				ul
-					li
-						.nav-link
-							padding: .5rem .3rem
-			@media screen and ( max-width: 991.98px)
-				ul
-					display: none
-					width: 100%
-					margin: unset
-					flex-direction: column
-					li
-						width: 100%
-						text-align: center
-						margin: 0
-						border-bottom: 1px solid $main
+		margin: 0 auto
+	.col-content
+		padding-top: 50px
 .about-page-2
 	position: relative
 	padding: 80px 0
