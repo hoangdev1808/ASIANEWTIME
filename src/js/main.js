@@ -1,15 +1,17 @@
 var ticking = false;
-var isFirefox = (/Firefox/i.test(navigator.userAgent));
-var isIe = (/MSIE/i.test(navigator.userAgent)) || (/Trident.*rv\:11\./i.test(navigator.userAgent));
-var scrollSensitivitySetting = 30; 
-var slideDurationSetting = 600; 
+var isFirefox = /Firefox/i.test(navigator.userAgent);
+var isIe =
+	/MSIE/i.test(navigator.userAgent) ||
+	/Trident.*rv\:11\./i.test(navigator.userAgent);
+var scrollSensitivitySetting = 30;
+var slideDurationSetting = 600;
 var currentSlideNumber = 0;
 var pageSlide = $(".full-page section");
 var totalSlideNumber = pageSlide.length;
 function parallaxScroll(evt) {
-	let delta = 0
+	let delta = 0;
 	if (isFirefox) {
-		delta = evt.detail * (-120);
+		delta = evt.detail * -120;
 	} else if (isIe) {
 		delta = -evt.deltaY;
 	} else {
@@ -46,67 +48,71 @@ var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
 window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
 
 function nextItem() {
-	$('section').removeClass('current-page')
+	$("section").removeClass("current-page");
 	var $previousSlide = pageSlide.eq(currentSlideNumber - 1);
 	var $currentSlide = pageSlide.eq(currentSlideNumber);
-	$currentSlide.addClass('current-page')
+	$currentSlide.addClass("current-page");
 	$previousSlide.removeClass("up-scroll").addClass("down-scroll");
 
-	$('.back-to-top').removeClass('active')
-	$('.back-to-home').removeClass('active')
-	if ($currentSlide.is(':first-child')) {
-		$('.back-to-top').removeClass('active')
-		$('.back-to-home').removeClass('active')
+	$(".back-to-top").removeClass("active");
+	$(".back-to-home").removeClass("active");
+	if ($currentSlide.is(":first-child")) {
+		$(".back-to-top").removeClass("active");
+		$(".back-to-home").removeClass("active");
 	}
 	if (currentSlideNumber == 1) {
-		$('.back-to-top').addClass('active')
-		$('.back-to-home').addClass('active')
+		$(".back-to-top").addClass("active");
+		$(".back-to-home").addClass("active");
 	} else {
-		$('.back-to-top').addClass('active')
-		$('.back-to-home').addClass('active')
+		$(".back-to-top").addClass("active");
+		$(".back-to-home").addClass("active");
 	}
 	if (currentSlideNumber == 6) {
-		$('.full-page footer').addClass('active')
+		$(".full-page footer").addClass("active");
 	} else {
-		$('.full-page footer').removeClass('active')
+		$(".full-page footer").removeClass("active");
 	}
-	$('#nav-pagination ul li').removeClass('active')
-	$('#nav-pagination ul li:nth-child(' + (currentSlideNumber + 1) + ')').addClass('active')
+	$("#nav-pagination ul li").removeClass("active");
+	$(
+		"#nav-pagination ul li:nth-child(" + (currentSlideNumber + 1) + ")"
+	).addClass("active");
 }
 
 function previousItem() {
-	$('section').removeClass('current-page')
-	$('footer').removeClass('active')
+	$("section").removeClass("current-page");
+	$("footer").removeClass("active");
 	var $currentSlide = pageSlide.eq(currentSlideNumber);
-	$currentSlide.addClass('current-page')
-	$('.back-to-top').addClass('active')
-	$('.back-to-home').addClass('active')
-	if ($currentSlide.is(':first-child')) {
-		$('.back-to-top').removeClass('active')
-		$('.back-to-home').removeClass('active')
+	$currentSlide.addClass("current-page");
+	$(".back-to-top").addClass("active");
+	$(".back-to-home").addClass("active");
+	if ($currentSlide.is(":first-child")) {
+		$(".back-to-top").removeClass("active");
+		$(".back-to-home").removeClass("active");
 	}
 
 	$currentSlide.removeClass("down-scroll").addClass("up-scroll");
-	$('#nav-pagination ul li').removeClass('active')
-	$('#nav-pagination ul li:nth-child(' + (currentSlideNumber + 1) + ')').addClass('active')
+	$("#nav-pagination ul li").removeClass("active");
+	$(
+		"#nav-pagination ul li:nth-child(" + (currentSlideNumber + 1) + ")"
+	).addClass("active");
 }
 
 function setBackgroundElement() {
-	$('[setBackground]').each(function () {
-		var background = $(this).attr('setBackground')
+	$("[setBackground]").each(function () {
+		var background = $(this).attr("setBackground");
 		$(this).css({
 			"background-image": "url(" + background + ")",
 			"background-size": "cover",
-			"background-position": "center center"
-		})
-	})
-	$('[setBackgroundRepeat]').each(function () {
-		var background = $(this).attr('setBackgroundRepeat')
+			"background-position": "center center",
+		});
+	});
+	$("[setBackgroundRepeat]").each(function () {
+		var background = $(this).attr("setBackgroundRepeat");
 		$(this).css({
 			"background-image": "url(" + background + ")",
-			"background-repeat": "repeat"
-		})
-	})
+			"background-repeat": "repeat",
+		});
+	});
 }
 
 function EqualHeightElement(el) {
@@ -118,53 +124,78 @@ function EqualHeightElement(el) {
 			height = thisHeight;
 		}
 	});
-	$(el).height(height)
+	$(el).height(height);
 }
 
 function scrollToTop() {
-	$('footer .button-wrapper').on('click', function () {
-		currentSlideNumber = 0
-		$('section').removeClass('down-scroll')
-		$('footer').removeClass('active')
-		$('.home-banner').addClass('current-page')
-	})
+	$("footer .button-wrapper").on("click", function () {
+		currentSlideNumber = 0;
+		$("section").removeClass("down-scroll");
+		$("footer").removeClass("active");
+		$(".home-banner").addClass("current-page");
+	});
 }
 
 function createPagination() {
-	$('main').append("<div id='nav-pagination'><ul></ul></div>")
+	$("main").append("<div id='nav-pagination'><ul></ul></div>");
 	var lstSection = $(".full-page section, footer");
 	for (let i = 0; i < totalSlideNumber; i++) {
 		var spanHtml = "";
 		if ($(lstSection[i]).attr("data-title") != undefined) {
-			spanHtml = " <span>" + $(lstSection[i]).attr("data-title") + "</span>";
+			spanHtml =
+				" <span>" + $(lstSection[i]).attr("data-title") + "</span>";
 		}
 		if (i == 0) {
-			$('#nav-pagination ul').append('<li class=\'active\' data-section=\'' + (i + 1) + '\'>' + (i + 1) + spanHtml + '</li>')
+			$("#nav-pagination ul").append(
+				"<li class='active' data-section='" +
+					(i + 1) +
+					"'>" +
+					(i + 1) +
+					spanHtml +
+					"</li>"
+			);
 		} else {
-			$('#nav-pagination ul').append('<li data-section=\'' + (i + 1) + '\'>' + (i + 1) + spanHtml + '</li>')
+			$("#nav-pagination ul").append(
+				"<li data-section='" +
+					(i + 1) +
+					"'>" +
+					(i + 1) +
+					spanHtml +
+					"</li>"
+			);
 		}
 	}
-	$('#nav-pagination ul li').on('click', function () {
-		$('#nav-pagination ul li').removeClass('active')
-		$(this).addClass('active')
-		let e = $(this).attr('data-section') - 1
-		$('.full-page section').removeClass('down-scroll up-scroll')
+	$("#nav-pagination ul li").on("click", function () {
+		$("#nav-pagination ul li").removeClass("active");
+		$(this).addClass("active");
+		let e = $(this).attr("data-section") - 1;
+		$(".full-page section").removeClass("down-scroll up-scroll");
 		if (e < currentSlideNumber) {
-			currentSlideNumber = e
-			$('.full-page section:nth-child(' + (currentSlideNumber + 1) + ')').addClass('up-scroll current-page')
-			$('.full-page section').removeClass('down-scroll')
+			currentSlideNumber = e;
+			$(
+				".full-page section:nth-child(" + (currentSlideNumber + 1) + ")"
+			).addClass("up-scroll current-page");
+			$(".full-page section").removeClass("down-scroll");
 			for (let i = currentSlideNumber; i < totalSlideNumber; i++) {
-				$('.full-page section:nth-child(' + (currentSlideNumber + 1) + ')').addClass('up-scroll')
+				$(
+					".full-page section:nth-child(" +
+						(currentSlideNumber + 1) +
+						")"
+				).addClass("up-scroll");
 			}
 		} else {
-			currentSlideNumber = e
-			$('.full-page section').removeClass('current-page')
-			$('.full-page section:nth-child(' + (currentSlideNumber + 1) + ')').addClass('current-page')
+			currentSlideNumber = e;
+			$(".full-page section").removeClass("current-page");
+			$(
+				".full-page section:nth-child(" + (currentSlideNumber + 1) + ")"
+			).addClass("current-page");
 			for (let i = 0; i < currentSlideNumber; i++) {
-				$('.full-page section:nth-child(' + (i + 1) + ')').addClass('down-scroll')
+				$(".full-page section:nth-child(" + (i + 1) + ")").addClass(
+					"down-scroll"
+				);
 			}
 		}
-	})
+	});
 }
 function toggleSearchWrapper() {
 	$(".header-icon .btn-search").on("click", function () {
@@ -247,7 +278,7 @@ function listBanerSlide() {
 			},
 		});
 	});
-	var swiper = new Swiper('.swiper-column .swiper-container', {
+	var swiper = new Swiper(".swiper-column .swiper-container", {
 		speed: 800,
 		slidesPerView: 3,
 		slidesPerColumn: 2,
@@ -255,12 +286,12 @@ function listBanerSlide() {
 		spaceBetween: 5,
 		grabCursor: false,
 		autoplay: {
-			delay: 3000
+			delay: 3000,
 		},
 		navigation: {
 			nextEl: ".swiper-column .swiper-button-next",
-			prevEl: ".swiper-column .swiper-button-prev"
-		}
+			prevEl: ".swiper-column .swiper-button-prev",
+		},
 	});
 	var listTin = new Swiper(".wrap-list-tin .swiper-container", {
 		slidesPerView: 1,
@@ -339,22 +370,27 @@ function headerActive() {
 }
 
 function crollToDiv() {
-	$('.zone-nav .categroly ul li .nav-link').on('click', function (event) {
-		$(this).parents('li').addClass('active');
-		var heightHeader = $('header').outerHeight();
+	$(".zone-nav .categroly ul li .nav-link").on("click", function (event) {
+		$(this).parents("li").addClass("active");
+		var heightHeader = $("header").outerHeight();
 		if (this.hash !== "") {
 			event.preventDefault();
 			var hash = this.hash;
-			$('html, body').animate({
-				scrollTop: $(hash).offset().top - 160
-			}, 900, function () {
-				window.location.hash = hash;
-			});
+			$("html, body").animate(
+				{
+					scrollTop: $(hash).offset().top - 160,
+				},
+				900,
+				function () {
+					window.location.hash = hash;
+				}
+			);
 		}
-		$('.zone-nav .categroly ul li .nav-link').not(this).parent('li').removeClass('active');
-		$(".about-nav .categroly ul li .nav-link")
+		$(".zone-nav .categroly ul li .nav-link")
 			.not(this)
 			.parent("li")
+			.removeClass("active");
+		$(".about-nav .categroly ul li .nav-link").not(this).parent("li");
 		window.addEventListener("scroll", function () {
 			var bannerheight = $("#pagebanner").outerHeight();
 			if (window.pageYOffset > bannerheight) {
@@ -370,16 +406,16 @@ function crollToDiv() {
 }
 
 function crollTop() {
-	if ($('.zone-nav').length >= 1) {
+	if ($(".zone-nav").length >= 1) {
 		window.addEventListener("scroll", function () {
 			var bannerheight = $("#pagebanner").outerHeight();
 			var heightHeader = $("header").outerHeight();
 			if (window.pageYOffset > bannerheight) {
 				document.querySelector(".zone-nav").classList.add("scolled");
-				$('.scolled').css('top', heightHeader)
+				$(".scolled").css("top", heightHeader);
 			} else {
 				document.querySelector(".zone-nav").classList.remove("scolled");
-				$('.zone-nav').css('top', 0)
+				$(".zone-nav").css("top", 0);
 				document
 					.querySelector(".about-nav")
 					.classList.remove("scolled");
@@ -390,21 +426,21 @@ function crollTop() {
 }
 
 function checkFullpage() {
-	if ($('.full-page').length >= 1) {
-		$('body').toggleClass('overflow-hidden')
+	if ($(".full-page").length >= 1) {
+		$("body").toggleClass("overflow-hidden");
 	}
 	if ($(window).width() < 1024.98) {
-		$('body').removeClass('overflow-hidden')
-		$('.full-page .home-page-6').toggleClass('active')
+		$("body").removeClass("overflow-hidden");
+		$(".full-page .home-page-6").toggleClass("active");
 	}
 }
 
 $(document).ready(function () {
-	setBackgroundElement()
-	scrollToTop()
-	createPagination()
+	setBackgroundElement();
+	scrollToTop();
+	createPagination();
 	setTimeout(() => {
-		$('section:first-child').addClass('current-page')
+		$("section:first-child").addClass("current-page");
 	}, 100);
 	toggleSearchWrapper();
 	listBanerSlide();
@@ -415,12 +451,12 @@ $(document).ready(function () {
 	crollTop();
 	checkFullpage();
 	$(window).resize(function () {
-		if ($('.full-page').length >= 1) {
-			$('body').toggleClass('overflow-hidden')
+		if ($(".full-page").length >= 1) {
+			$("body").toggleClass("overflow-hidden");
 		}
 		if ($(window).width() < 1024.98) {
-			$('body').removeClass('overflow-hidden')
-			$('.full-page .home-page-6').toggleClass('active')
+			$("body").removeClass("overflow-hidden");
+			$(".full-page .home-page-6").toggleClass("active");
 		}
 	});
-})
+});
