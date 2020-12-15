@@ -7,9 +7,9 @@ footer
 							.col-title-partner.d-flex.align-center
 								.title.text-white.f-24.text-uppercase.fw-700 đối tác
 						.col-lg-10
-							.col-list-pertner.d-flex.align-center
+							.col-list-pertner.d-flex.align-center.flex-row.flex-wrap
 								-for(i=1; i<5; i++)
-									.col.item-partner.d-flex.align-center.justify-center
+									.item-partner.d-flex.align-center.justify-center.flex-
 										.item-img
 											img.transition.lazyload(data-src="./img/index/partner-"+i+".png", alt="")
 				.list-partners
@@ -18,9 +18,9 @@ footer
 							.col-title-partner.d-flex.align-center
 								.title.text-white.f-24.text-uppercase.fw-700 ngân hàng liên kết
 						.col-lg-10
-							.col-list-pertner.d-flex.align-center
+							.col-list-pertner.d-flex.align-center.flex-row.flex-wrap
 								-for(i=5; i<10; i++)
-									.col.item-partner.d-flex.align-center.justify-center
+									.item-partner.d-flex.align-center.justify-center
 										.item-img
 											img.transition.lazyload(data-src="./img/index/partner-"+i+".png", alt="")
 				.list-partners
@@ -29,21 +29,21 @@ footer
 							.col-title-partner.d-flex.align-center
 								.title.text-white.f-24.text-uppercase.fw-700 dự án
 						.col-lg-10
-							.col-list-pertner.d-flex.align-center
+							.col-list-pertner.d-flex.align-center.flex-row.flex-wrap
 								-for(i=10; i<16; i++)
-									.col.item-partner.d-flex.align-center.justify-center
+									.item-partner.d-flex.align-center.justify-center
 										.item-img
 											img.transition.lazyload(data-src="./img/index/partner-"+i+".png", alt="")
 	.container
 		.footer-header
 			.row
-				.col-lg-3
+				.col-lg-3.col-md-6.col-sm-6
 					.footer-item.p-0
 						.item-header
 							h1.f-30 Asia New Time
 						.item-body.p-0
 							h2.f-18 Real Estate Development
-				.col-lg-3
+				.col-lg-3.col-md-6.col-sm-6
 					.footer-item
 						.item-header.d-flex.align-center
 							em.ri-phone-line
@@ -51,14 +51,14 @@ footer
 						.item-body
 							.desc 
 								span 0911 200 800
-				.col-lg-3
+				.col-lg-3.col-md-6.col-sm-6
 					.footer-item
 						.item-header.d-flex.align-center
 							em.ri-mail-line
 							.text.f-18 Email
 						.item-body
 							.desc info@asianewtime.com 
-				.col-lg-3
+				.col-lg-3.col-md-6.col-sm-6
 					.footer-item
 						.item-header.d-flex.align-center
 							em.ri-cursor-line
@@ -67,7 +67,7 @@ footer
 							.desc https://www.asianewtime.com/
 		.footer-bottom
 			.row
-				.col-lg-3
+				.col-lg-3.col-md-6
 					.footer-item
 						.item-header
 							.caption.f-18 Trụ sở chính
@@ -79,7 +79,7 @@ footer
 								p 
 									strong Điện thoại: 
 									|0123 456 789
-				.col-lg-3
+				.col-lg-3.col-md-6
 					.footer-item
 						.item-header
 							.caption.f-18 Văn phòng Tản Đà
@@ -91,7 +91,7 @@ footer
 								p 
 									strong Điện thoại: 
 									|0123 456 789
-				.col-lg-3
+				.col-lg-3.col-md-6
 					.footer-item
 						.item-header
 							.caption.f-18 Văn phòng Quy Nhơn
@@ -103,7 +103,7 @@ footer
 								p 
 									strong Điện thoại: 
 									|0123 456 789
-				.col-lg-3
+				.col-lg-3.col-md-6
 					.footer-item
 						.item-header
 							.caption.f-18 Văn phòng Bà Rịa - Vũng Tàu
@@ -126,10 +126,7 @@ footer
 				li
 					a(href="")
 						em.ri-instagram-line
-			.copy Copyright © 2020 Bản quyền thuộc về Asia New Time. 
-				a(href="") Thiết kế 
-				|Website bởi 
-				a(href="") Cánh Cam.
+			.copy Copyright © 2020 Bản quyền thuộc về Asia New Time. Thiết kế Website bởi Cánh Cam.
 			ul.list-coppy.d-flex.align-center
 				li
 					a(href="") Điều khoản sử dụng

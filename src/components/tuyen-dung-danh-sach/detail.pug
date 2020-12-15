@@ -1,0 +1,124 @@
+section.detail-page.kv-section
+	.container
+		.row
+			.col-xl-9.col-lg-12.col-md-12.col-12
+				.title.f-30.f-700.color-text.text-uppercase CHUYÊN VIÊN TƯ VẤN
+				.bottom-wrapper
+					ul.social
+						li
+							a(href="")
+								em.ri-facebook-fill
+						li
+							a(href="")
+								em.ri-twitter-fill
+				.full-content.zoom-img
+					.img
+						img.lazyload(data-src="./img/tuyen-dung-sa/detail.png", alt="")
+					.content
+						.title.f-24.fw-700.color-text.text-uppercase THÔNG TIN TUYỂN DỤNG
+						table
+							tbody
+								tr
+									td
+										em.fa.fa-id-badge
+										|Số lượng cần tuyển
+									td 100
+								tr
+									td
+										em.fas.fa-dollar-sign
+										|Mức lương
+									td 
+										span 20 - 50 triệu / 1 tháng
+								tr
+									td
+										img(src="./img/icons/ht.png" alt="")
+										| Hình thức công việc
+									td Toàn thời gian cố định
+								tr
+									td
+										img(src="./img/icons/diadiem.png" alt="")
+										| Địa điểm làm việc
+									td TP. HCM, Bình Định, Vũng Tàu
+								tr
+									td
+										em.fa.fa-briefcase
+										| Kinh nghiệm
+									td 6 tháng - 1 năm
+								tr
+									td
+										img(src="./img/icons/patent.png" alt="")
+										| Yêu cầu bằng cấp
+									td Tốt nghiệp Cao đẳng / Đại học
+								tr
+									td
+										img(src="./img/icons/sex.png" alt="")
+										| Yêu cầu giới tính
+									td Nam / Nữ
+								tr
+									td
+										em.far.fa-calendar-check
+										|Thời hạn nộp hồ sơ
+									td 29/04/2020
+				.list-content
+					.item
+						.title.f-24.fw-600.text-main.text-uppercase Mô tả công việc
+						ul
+							li
+								p Lên kế hoạch tìm kiếm khách hàng qua các kênh khác nhau
+							li
+								p Báo cáo kết quả hàng tuần với ban lãnh đạo
+							li
+								p Thực hiện các công việc được giao
+							li
+								p Chăm sóc khách hàng cũ và thu thập thông tin khách hàng mới
+							li
+								p Kế hợp các phòng ban thực hiện các chiến dịch của công ty
+					.item
+						.title.f-24.fw-600.text-main.text-uppercase quyền lợi
+						ul
+							li
+								p Lên kế hoạch tìm kiếm khách hàng qua các kênh khác nhau
+							li
+								p Báo cáo kết quả hàng tuần với ban lãnh đạo
+							li
+								p Thực hiện các công việc được giao
+							li
+								p Chăm sóc khách hàng cũ và thu thập thông tin khách hàng mới
+							li
+								p Kế hợp các phòng ban thực hiện các chiến dịch của công ty
+					.item
+						.title.f-24.fw-600.text-main.text-uppercase yêu cầu
+						ul
+							li
+								p Lên kế hoạch tìm kiếm khách hàng qua các kênh khác nhau
+							li
+								p Báo cáo kết quả hàng tuần với ban lãnh đạo
+							li
+								p Thực hiện các công việc được giao
+							li
+								p Chăm sóc khách hàng cũ và thu thập thông tin khách hàng mới
+							li
+								p Kế hợp các phòng ban thực hiện các chiến dịch của công ty
+				.box-apply
+					a.btn.btn__down(href="") Tải mẫu đơn ứng tuyển
+					span Hoặc
+					a.btn.btn__apply(href="") Nộp đơn ứng tuyển
+			.col-lg-3.col-sm-12
+				.recuirement-other
+					.recuirement-header
+						.main-title.f-24.fw-700.text-main.text-uppercase Tuyển dụng khác
+					-for(i=0; i<5; i++)
+						.recuirement-body
+							a(href="#")
+								.title.f-18.fw-700.text-black Nhân viên phát triển thị
+								.address
+									em.material-icons room
+									.text Ho Chi Minh City
+								.desc
+									.money
+										em.material-icons attach_money
+										| 1.000 - 2.000 USD
+									time
+										em.material-icons event_available
+										|10/02/2020
+

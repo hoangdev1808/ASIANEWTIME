@@ -1,4 +1,4 @@
-@media(min-width: 1280.98px)
+@media(min-width: 1200px)
 	@mixin transition($time, $property: all, $easing: ease-in)
 		transition: $property $time $easing
 	$parallax-offset: 0
@@ -46,7 +46,7 @@
 	padding-right: 30px
 	transform: translateY(-50%)
 	z-index: 999
-	@media(max-width: 1280.98px)
+	@media(max-width: 1200px)
 		display: none
 	ul
 		list-style-type: none
@@ -186,7 +186,7 @@
 		padding-top: 0
 	section
 		display: flex
-		@media(min-width: 1280.98px)
+		@media(min-width: 1200px)
 			.animation-left
 				opacity: 0
 				transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
@@ -388,6 +388,8 @@
 	// 	.menu-fake-header
 	// 		ul 
 				// padding-right: 70px
+	@media screen and ( max-width: 1199.98px)
+		display: none
 	&.active
 		transition: all 2s cubic-bezier(.22, .44, 0, 1)
 		min-width: 1200px
@@ -509,31 +511,25 @@
 			position: absolute
 			transform: translateY(-50%)  rotate(0)
 			border-top: 1px solid #c7931c
-	// &.last
-	// 	.open-button
-	// 		background:#c7931c
-	// 		color: #fff
-	// 		&:after
-	// 			border-color:#c7931c
-	// 		&:before
-	// 			border-color:#c7931c
-@media (max-width: 1025px)
-	#fake-header-open
-		position: fixed
-		// transform: translateY(-150px) rotate(90deg)
-		// display: none
-		right: 0
-		.open-button
-			background: #c7931c
-			color: #fff
-			&:after
-				border-color: #c7931c
-			&:before
-				border-color: #c7931c
-	#fake-header
-		.close-button
-			right: -10px
-			top: 25px
-		ul
-			a
-				font-size: 16px
+	@media screen and ( max-width: 1199.98px)
+		display: none
+// @media (max-width: 1025px)
+// 	#fake-header-open
+// 		position: fixed
+// 		// transform: translateY(-150px) rotate(90deg)
+// 		// display: none
+// 		right: 0
+// 		.open-button
+// 			background: #c7931c
+// 			color: #fff
+// 			&:after
+// 				border-color: #c7931c
+// 			&:before
+// 				border-color: #c7931c
+// 	#fake-header
+// 		.close-button
+// 			right: -10px
+// 			top: 25px
+// 		ul
+// 			a
+// 				font-size: 16px
