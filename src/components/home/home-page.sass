@@ -3,27 +3,40 @@
 	background-color: #ffffff
 	.banner-wrapper
 		width: 100%
-		.swiper-slide
-			position: relative
+		height: 100%
+		.img
 			width: 100%
-			height: 100%
-			.img
-				width: 100%
-				height: 100vh
-			.content
-				position: absolute
-				left: 50%
-				bottom: 3%
-				transform: translateX(-50%)
-				.text
-					max-width: 850px
-					text-shadow: 2px 0 5px rgba(0, 0, 0, 0.25)
-					color: #ffffff
-					font-size: 48/16*1rem
-					font-weight: 900
-					text-align: center
-					span
-						color: $main
+			height: 100vh
+			img
+				transition: all 5s cubic-bezier(.22, .44, 0, 1)
+				transform: scale(1)
+		.content
+			position: absolute
+			left: 50%
+			bottom: 3%
+			transform: translateX(-50%)
+			.text
+				transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.1s
+				transform: translate3d(-20%, 0, 0)
+				opacity: 0
+				display: inline-block
+				max-width: 850px
+				text-shadow: 2px 0 5px rgba(0, 0, 0, 0.25)
+				color: #ffffff
+				font-size: 48/16*1rem
+				font-weight: 900
+				text-align: center
+				span
+					color: $main
+		.swiper-slide
+			&-active
+				.img
+					img
+						transform: scale(1.1)
+				.content
+					.text
+						transform: translate3d(0, 0, 0)
+						opacity: 1
 .home-page-2
 	.col-content
 		.main-title
@@ -372,4 +385,3 @@
 	padding: 0
 	&.active
 		display: none
-
