@@ -4,23 +4,23 @@
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/ZoneList">
-		<ul class="navbar-nav d-flex align-center">
+		<ul class="list-nav type-none">
 			<xsl:apply-templates select="Zone"></xsl:apply-templates>
 		</ul>
 	</xsl:template>
 	<xsl:template match="Zone">
-		<li class="nav-item">
+		<li>
 			<xsl:if test="IsActive='true'">
 				<xsl:attribute name="class">
-					<xsl:text>nav-item active</xsl:text>
+					<xsl:text>active</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
-			<a class="nav-link text-uppercase f-18 fw-800">
+			<a>
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
 				</xsl:attribute>
 				<xsl:attribute name="title">
-					<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+					<xsl:value-of select="Title"></xsl:value-of>
 				</xsl:attribute>
 				<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 			</a>

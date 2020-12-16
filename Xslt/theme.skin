@@ -4,31 +4,32 @@
 <%@ Register Namespace="CanhCam.Web.DealerUI" Assembly="CanhCam.Features.DealerLocator" TagPrefix="portal" %>
 <%@ Register Namespace="CanhCam.Web.SharedFilesUI" Assembly="CanhCam.Features.SharedFiles" TagPrefix="portal" %>
 
-<portal:ZonesDisplaySettings runat="server" 
+<portal:ZonesDisplaySettings runat="server"
 	ShowDescription="true"
     DescriptionControlType="textarea"
     ShowPrimaryImage="true"
     ShowSecondImage="false"
 	/>
-<portal:BannerDisplaySettings runat="server" 
+<portal:BannerDisplaySettings runat="server"
 	ShowDescription="true"
     DescriptionControlType="editor"
     ShowThumbnail="false"
     ThumbnailWidth="100"
     ImageWidth="150"
 	/>
-<portal:NewsDisplaySettings runat="server" 
+<portal:NewsDisplaySettings runat="server"
 	ShowAttribute="true"
+    ShowSubtitle="true"
 	/>
-<portal:SharedFilesDisplaySettings runat="server" 
+<portal:SharedFilesDisplaySettings runat="server"
 	ShowFolder="false"
     ShowYear="false"
 	/>
-<portal:SearchResultsDisplaySettings runat="server" 
+<portal:SearchResultsDisplaySettings runat="server"
 	PageId="3"
 	/>
 
-<portal:LayoutDisplaySettings runat="server" 
+<portal:LayoutDisplaySettings runat="server"
     LeftSideNoRightSideCss="col-left"
     RightSideNoLeftSideCss="col-sm-3 right-content rightside right2column"
     CenterNoLeftSideCss="col-sm-9 center-rightmargin cmszone"
@@ -83,17 +84,17 @@
     RepeatColumns="3"
     RepeatDirection="horizontal"
     RepeatLayout="Table"
-       
+
     />
-       
+
 <asp:CheckBoxList  runat="server" SkinID="Blog"
     CssClass="aspcheckboxlist"
     RepeatColumns="4"
     RepeatDirection="horizontal"
     RepeatLayout="Table"
-       
+
     />
-   
+
 
 <asp:Calendar  runat="server"
      CaptionAlign="Top"
@@ -118,10 +119,10 @@
      TodayDayStyle-CssClass="aspcalendartoday"
      WeekendDayStyle-CssClass="aspcalendarweekendday"
      Width="100%"
-    /> 
-    
+    />
+
     <%--  this is the EventCalendar  --%>
-    
+
 <gb:DataCalendar runat="server"
      BackColor=""
      BorderColor=""
@@ -154,7 +155,7 @@
 <asp:RequiredFieldValidator runat="server" ForeColor="" CssClass="fa fa-exclamation-triangle" />
 <asp:RegularExpressionValidator runat="server" ForeColor="" CssClass="fa fa-exclamation-triangle" />
 <asp:CompareValidator runat="server" ForeColor="" CssClass="fa fa-exclamation-triangle" />
-<asp:CustomValidator runat="server" ForeColor="" CssClass="fa fa-exclamation-triangle" /> 
+<asp:CustomValidator runat="server" ForeColor="" CssClass="fa fa-exclamation-triangle" />
 
 <asp:ValidationSummary runat="server" SkinID="Registration" ForeColor="" CssClass="fa fa-exclamation-triangle" />
 <asp:RangeValidator runat="server" SkinID="Registration" ForeColor="" CssClass="fa fa-exclamation-triangle" />

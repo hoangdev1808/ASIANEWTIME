@@ -20,16 +20,24 @@
 			line-height: 28px
 			letter-spacing: 0.45px
 		.list-item
-			.item
-				padding: 19px 26px 19px 31px
-				border: 1px solid #d5d5d5
-				border-bottom: 0px solid #000
-				background-color: $white
-				transition: .3s all  ease-in-out
-				&+.item
-					border-top: 1px solid #d5d5d5
-				&:last-child
-					border-bottom: 1px solid #d5d5d5
+			height: 382px
+			overflow: auto
+			&::-webkit-scrollbar
+				width: 2px
+			&::-webkit-scrollbar-track
+				background: #f1f1f1
+			&::-webkit-scrollbar-thumb
+				background: #d8d7d7
+	.item
+		padding: 19px 26px 19px 31px
+		border: 1px solid #d5d5d5
+		border-bottom: 0px solid #000
+		background-color: $white
+		transition: .3s all  ease-in-out
+		&+.item
+			border-top: 1px solid #d5d5d5
+			&:last-child
+				border-bottom: 1px solid #d5d5d5
 				&:hover
 					background-color: #f5f9ff
 				a
@@ -46,6 +54,8 @@
 	.show-map
 		flex: 1
 		max-height: 482px
+		[class*="Module"]
+			height: 100%
 		@media screen and ( max-width: 992px )
 			flex: 0 0 100%
 			height: 50vh
