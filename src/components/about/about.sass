@@ -1,12 +1,37 @@
 .about-1
-	padding-top: 0
 	min-height: 750px
 	position: relative
-	.zone-nav
-		max-width: 695px
-		margin: 0 auto
+	overflow: hidden
+	margin-top: -60px
+	z-index: -1
+	.img
+		@media screen and ( min-width: 768px)
+			display: none
 	.col-content
 		padding-top: 50px
+		.main-title
+			&::after
+				background-color: $white
+		.desc
+			padding-top: 30px
+		.btn-view-more
+			margin-top: 40px
+	@media screen and ( max-width: 767px)
+		background-image: none !important
+		min-height: auto
+		.col-content
+			padding-top: 20px
+			.main-title
+				color: $title
+				padding-bottom: 7px
+				margin-bottom: 15px
+				&::after
+					background-color: $title
+			.desc
+				color: $title
+				padding-top: 0
+			.btn-view-more
+				margin-top: 20px
 .about-page-2
 	position: relative
 	padding: 80px 0
@@ -21,17 +46,7 @@
 		margin-bottom: 80px
 		background-color: #f8f8f8
 		.item-img
-			position: relative
-			display: block
-			overflow: hidden
-			padding-top: 62%
-			img
-				position: absolute
-				top: 0
-				left: 0
-				width: 100%
-				height: 100%
-				min-height: 450px
+			+img-ratio(450/735)
 		.item-content
 			padding-left: 75px
 			padding-right: 75px
@@ -48,12 +63,26 @@
 			margin-bottom: 0
 			.col-lg-7
 				order: 2
-				padding-right: 15px
-				padding-left: 0
 			.col-lg-5
 				order: 1
-				padding-left: 15px
-				padding-right: 0
+	@media screen and ( max-width: 991px)
+		padding: 25px 0
+		.bg-about
+			height: 410px
+		.list-items
+			margin-bottom: 30px
+			.item-content
+				padding: 30px
+			&:last-child
+				.col-lg-7
+					order: 1
+				.col-lg-5
+					order: 2
+	@media screen and ( max-width: 575px)
+		.list-items
+			.item-content
+				.main-title
+					margin-bottom: 15px
 .about-page-3
 	padding: 72px 0
 	.main-title
@@ -64,17 +93,18 @@
 	.item
 		cursor: pointer
 		.item-img
-			position: relative
-			display: block
-			padding-top: 100%
-			img
-				position: absolute
-				top: 0
-				left: 0
-				width: 100%
-				height: 100%
-				min-height: 400px
+			+img-ratio(400/390)
 		.item-content
 			width: 100%
 			height: 60px
 			background-color: $main
+	@media screen and ( max-width: 991px)
+		padding: 25px 0
+		.main-title
+			margin-bottom: 30px
+		.item
+			margin-bottom: 30px
+	@media screen and ( max-width: 575px)
+		.main-title
+			margin-bottom: 15px
+

@@ -4,13 +4,12 @@
 	],
 	"js": [
 		"bower_components/jquery/dist/jquery.min.js",
-		"src/_plugins/ls.unveilhooks.min.js",
-		"src/_plugins/mapping.js",
-		"src/_plugins/swiper/swiper-bundle.min.js",
-		"src/_plugins/Tabslet.js",
+		"src/_plugins/*.min.js",
+		"src/_plugins/*.js",
+		"src/_plugins/*/*.js",
+		"src/_plugins/*/*.min.js",
 		"bower_components/lazysizes/lazysizes.js",
-		"bower_components/fancybox/dist/jquery.fancybox.min.js",
-		"src/_plugins/mapping-listener.js"
+		"bower_components/fancybox/dist/jquery.fancybox.min.js"
 	],
 	"css": [
 		"src/_plugins/font.css",

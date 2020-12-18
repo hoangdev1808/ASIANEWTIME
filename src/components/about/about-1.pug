@@ -1,20 +1,21 @@
-section#about-1.about-1.home-page-2.kv-section(setBackground='../img/index/bg-home-2.png')
-	.zone-nav
-		.categroly
-			.box-category
-				p Danh mục
-				//- em.material-icons expand_more
-			ul
-				li.d-flex.align-center.justify-center.transition
-					a.nav-link.fw-700.f-14(href="#about-1") Câu chuyện Asia New Time
-				li.d-flex.align-center.justify-center.transition
-					a.nav-link.fw-700.f-14(href="#about-2") Tầm nhìn - Sứ mệnh
-				li.d-flex.align-center.justify-center.transition
-					a.nav-link.fw-700.f-14(href="#about-3") Đối tác chiến lược
+.zone-nav
+	.categroly.transition
+		.box-category
+			em.material-icons expand_more
+		ul.transition
+			li.d-flex.align-center.justify-center.transition
+				a.nav-link.fw-700.f-14(href="#about-1") Câu chuyện Asia New Time
+			li.d-flex.align-center.justify-center.transition
+				a.nav-link.fw-700.f-14(href="#about-2") Tầm nhìn - Sứ mệnh
+			li.d-flex.align-center.justify-center.transition
+				a.nav-link.fw-700.f-14(href="#about-3") Đối tác chiến lược
+section#about-1.about-1.kv-section(setBackground='./img/index/bg-home-2.png')
 	.container
 		.row
-			.col-lg-8
-			.col-lg-4
+			.col-lg-8.col-md-6
+				.img
+					img.lazyload(data-src="./img/index/bg-home-2.png")
+			.col-lg-4.col-md-6
 				.col-content
 					.main-title.text-white Câu chuyện Asia New Time
 					.desc.color-white.f-18 Với hơn 20.000 sản phẩm bất động sản đa dạng, thuộc các khu vực có tiềm năng phát triển nhất hiện nay, Asia New Time tự hào mang đến nhiều sự lựa chọn, phù hợp với nhu cầu đầu tư cũng như an cư của mọi khách hàng. Chúng tôi luôn nỗ lực hết mình để mang đến cho Qúy khách hàng những điều tốt đẹp nhất.

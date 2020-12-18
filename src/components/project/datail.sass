@@ -1,0 +1,218 @@
+.pro-detail-1
+	position: relative
+	padding-top: 0
+	overflow: hidden
+	.background
+		position: absolute
+		top: -30%
+		right: 0
+		z-index: -1
+	.zone-nav
+		margin-top: 1px
+		width: 100%
+		margin-bottom: 50px
+		.categroly
+			padding: 0 26px
+			max-width: 100%
+			ul
+				li
+					width: 130px
+	.main-title
+		margin-bottom: 28px
+	.desc
+		max-width: 810px
+		padding: 0 10px
+		margin: 0 auto
+		margin-bottom: 37px
+	.list-items
+		max-width: 1020px
+		margin: 0 auto
+		flex-wrap: wrap
+		flex-direction: row
+		.item
+			flex: 1 1 0
+			padding: 0 15px
+			width: 100%
+			height: 140px
+			.item-img
+				width: 41px
+				height: 41px
+				margin: 0 auto
+				margin-bottom: 25px
+				img
+					width: 100%
+					height: 100%
+			.item-content
+				.item-title
+					padding-bottom: 15px
+.pro-detail-2
+	padding-bottom: 0
+	.list-wrapper
+		.content-wrapper
+			width: 100%
+			height: 100%
+			padding-right: 75px
+			.content
+				max-width: 420px
+				margin-left: auto
+				.main-title
+					margin-bottom: 28px
+				.desc
+					ul
+						list-style: none
+						padding: 0
+						li 
+							position: relative
+							padding-left: 15px
+							p
+								line-height: 26px
+								span
+									color: $main
+							&::before
+								position: absolute
+								left: 0
+								content: 'fiber_manual_record'
+								font-family: Material Icons
+								color: $title
+								font-size: 8px
+								line-height: 26px
+
+		.img
+			width: 100%
+			position: relative
+			+img-ratio(610/1080)
+			.play-icon
+				position: absolute
+				width: 99px
+				height: 99px
+				top: 50%
+				left: 50%
+				z-index: 2
+				transform: translate(-50%, -50%)
+			&::after
+				position: absolute
+				width: 100%
+				height: 100%
+				content: ''
+				top: 0
+				left: 0
+				background-color: $opacity
+		&:last-child
+			.col-lg-5
+				order: 2
+			.col-lg-7
+				order: 1
+			.content-wrapper
+				padding-left: 75px
+				padding-right: 0
+				.content
+					margin-left: 0
+					margin-right: auto
+					.desc
+						ul
+							li 
+								&::before
+									color: $main
+			.img
+				&::after
+					display: none
+.pro-detail-3
+	.main-title
+		margin-bottom: 30px
+	.swiper-column
+		position: relative
+		.swiper-slide
+		.item-ult
+			width: 100%
+			height: 310px
+			margin-bottom: 30px
+			background-color: $white
+			position: relative
+			.item-img
+				+img-ratio(220/390)
+			.item-content
+				padding: 20px 60px
+.pro-detail-4
+	.main-title
+		margin-bottom: 40px
+	.img
+		width: 100%
+		height: 100%
+		border: solid 1px #e1e1e1
+.pro-detail-5
+	position: relative
+	padding-bottom: 0
+	.background
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+	.main-title
+		margin-bottom: 40px
+	.kv-swiper
+		position: relative
+		max-width: 870px
+		margin: 0 auto
+		.swiper-container
+			overflow: visible
+		.img
+			+img-ratio(600/870)
+
+		.swiper-button-next
+			right: -175px
+		.swiper-button-prev
+			left: -175px
+		.swiper-slide
+			&-active
+				.img
+					&.opacity
+						&::after
+							opacity: 0
+							visibility: hidden
+.pro-detail-6
+	position: relative
+	padding-top: 80px
+	.background
+		position: absolute
+		right: 0
+		top: -10%
+	.list-wrapper
+		margin-bottom: 60px
+		.item-img
+			+img-ratio(450/735)
+		.project-content
+			height: 100%
+			padding-left: 55px
+			.content
+				max-width: 420px
+				.desc
+					.text
+						line-height: 24px
+					ul
+						list-style: none
+						padding: 0
+						li
+							position: relative
+							padding-left: 15px
+							p
+								font-size: 1rem
+								font-weight: 700
+								color: #333333
+								line-height: 24px
+							&::before
+								position: absolute
+								left: 0
+								content: 'fiber_manual_record'
+								font-family: Material Icons
+								color: $title
+								font-size: 8px
+								line-height: 26px
+		&:nth-child(even)
+			.col-lg-7
+				order: 2
+			.col-lg-5
+				order: 1
+			.project-content
+				padding-left: 0
+		&:last-child
+			margin-bottom: 0

@@ -2,7 +2,6 @@
 	position: relative
 	font-size: 40/16*1rem
 	font-weight: 400
-	text-transform: uppercase
 	line-height: 1
 	padding-bottom: 13px
 	&.center
@@ -12,6 +11,8 @@
 			transform: translateX(-50%)
 	&.text-white
 		color: #ffffff
+		&::after
+			background-color: $white
 	&.color-title
 		color: $title
 
@@ -23,12 +24,8 @@
 		height: 1px
 		background-color: #0a293b
 		content: ''
-	@media(max-width: 1023px)
-		font-size: 44px
-	@media(max-width: 768px)
-		font-size: 40px
-	@media(max-width: 576px)
-		font-size: 38px
+	@media(max-width: 1024px)
+		font-size: 28px
 .time
 	position: absolute
 	background-color: $main

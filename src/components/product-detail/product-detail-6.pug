@@ -1,22 +1,24 @@
 section#pro-detail-2.resale-detail-6.kv-section
-	.container-fluid
+	.background
+		img.lazyload(data-src="./img/product/detail-bg-2.png", alt="")
+	.container-fluid.p-0
 		.main-title.fw-900.text-main.text-uppercase.center mặt bằng phân lô
 		.image-map-wrapper
 			img.lazyload(data-src='./img/product/detail-9.png' usemap='#image-map')
 			map(name='image-map')
-				area(target='_blank' class='tooltip' data-tooltip-content="#image-map-tooltip-1"  alt='service'   coords='69,388,244,330,386,744,229,806,174,687' shape='poly')
-				area(target='_blank' class='tooltip' data-tooltip-content="#image-map-tooltip-2"   alt='pool'  coords='434,420,104' shape='circle')
-		.hidden
-			#image-map-tooltip-1
-				.figure-tooltip
-					.figure-image
-						img(src="./img/product/detail-9.png", alt="")
-					.figcaption
-						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ex esse, eveniet molestiae off
+				area.icon(target='' alt='' title='' href='' coords='734,295,792,289,868,312,845,616,647,614' shape='poly')
+				area(target='' alt='' title='' href='' coords='878,407,1012,519' shape='rect')
+		//- .hidden
+		//- 	#image-map-tooltip-1
+		//- 		.figure-tooltip
+		//- 			.figure-image
+		//- 				img(src="./img/product/detail-9.png", alt="")
+		//- 			.figcaption
+		//- 				p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ex esse, eveniet molestiae off
 				
-			#image-map-tooltip-2
-				.figure-tooltip
-					.figure-image
-						img(src="./img/product/detail-9.png", alt="")
-					.figcaption
-						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ex esse, eveniet molestiae off
+		//- 	#image-map-tooltip-2
+		//- 		.figure-tooltip
+		//- 			.figure-image
+		//- 				img(src="./img/product/detail-9.png", alt="")
+		//- 			.figcaption
+		//- 				p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ex esse, eveniet molestiae off

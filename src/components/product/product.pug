@@ -1,12 +1,12 @@
 section.product-page.kv-section
 	.container
-		.filter-wrapper
-			.text Bộ lọc
+		.filter-wrapper.d-flex.align-center
+			.text.f-20.fw-700.text-main Bộ lọc
 			.wrapper
-				.dropdown
-					a(href="") 
+				.dropdown.d-flex.align-center.justify-between
+					a.f-16.fw-500.text-main.d-flex.align-center(href="")
 						em.ri-building-2-fill
-						|Khu vực
+						.text Khu vực
 						em.ri-arrow-down-s-line
 					.dropdown-menu
 						ul
@@ -15,10 +15,10 @@ section.product-page.kv-section
 							li
 								a(href="") TP.Hồ Chí Minh
 			.wrapper
-				.dropdown
-					a(href="")
+				.dropdown.d-flex.align-center.justify-between
+					a.f-16.fw-500.text-main.d-flex.align-center(href="")
 						em.ri-shape-2-fill
-						|Dựu án
+						.text Dựu án
 						em.ri-arrow-down-s-line
 					.dropdown-menu
 						ul
@@ -30,16 +30,15 @@ section.product-page.kv-section
 			.row
 				-for(i=1; i<7; i++)
 					.col-lg-4
-						.item-product
-							.item-img
-								a(href="resale-detail.html")
-									img.lazyload(data-src="./img/product/product-"+i+".png", alt="")
+						.item-product.zoom-img
+							a.item-img(href="resale-detail.html")
+								img.lazyload(data-src="./img/product/product-"+i+".png", alt="")
 							.item-content
 								a(href="resale-detail.html")
 									.text.text-capitalize.f-18.text-main.fw-700 Long Thành Central
 				.modulepager
 					ul.pagination
-						li
+						li.active
 							a(href="") 1
 						li
 							a(href="") 2

@@ -1,0 +1,53 @@
+.product-page
+	.filter-wrapper
+		width: 100%
+		padding: 18px 25px
+		margin-bottom: 30px
+		background-color: #f3f6fb
+		.wrapper
+			margin-left: 20px
+			.dropdown
+				width: 258px
+				min-height: 55px
+				background-color: $white
+				padding-left: 17px
+				padding-right: 10px
+				border-radius: 5px
+				a
+					width: 100%
+					.ri-arrow-down-s-line
+						margin-left: auto
+					.text
+						padding-left: 17px
+				.dropdown-menu
+					padding: 0
+					ul
+						li
+							padding-left: 20px
+							border-top: solid 1px #e1e1e1
+							a
+								color: $title
+								font-size: 1rem
+								line-height: 40px
+							&:hover
+								a
+									text-decoration: underline
+									font-weight: 700
+
+				&:hover
+					background-color: $title
+					a
+						color: #ffffff
+			&:nth-child(2)
+				margin-left: 25px
+	.product-wrapper
+		.item-product
+			margin-bottom: 30px
+			.item-img
+				+img-ratio(245/390)
+			.item-content
+				width: 100%
+				border: solid 1px #e1e1e1
+				background-color: $white
+				padding: 30px 30px
+

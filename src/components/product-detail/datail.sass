@@ -1,0 +1,221 @@
+// .zone-nav
+// 	margin-top: 1px
+// 	.categroly
+// 		max-width: 1020px
+// 		margin: 0 auto
+// 		ul
+// 			li
+// 				width: 170px
+.resale-detail-1
+	.main-title
+		margin-bottom: 28px
+	.desc
+		max-width: 1020px
+		margin: 0 auto
+		line-height: 24px
+		word-spacing: -1.5px
+	.list-items
+		padding-top: 36px
+		max-width: 1020px
+		margin: 0 auto
+		flex-wrap: wrap
+		flex-direction: row
+		.item
+			flex: 1 1 0
+			padding: 0 15px
+			width: 100%
+			height: 140px
+			.item-img
+				width: 41px
+				height: 41px
+				margin: 0 auto
+				margin-bottom: 25px
+				img
+					width: 100%
+					height: 100%
+			.item-content
+				.item-title
+					padding-bottom: 15px
+.resale-detail-2
+	.content-wrapper
+		width: 100%
+		height: 100%
+		padding-right: 105px
+		padding-top: 105px
+		.content
+			max-width: 420px
+			margin-left: auto
+			.main-title
+				margin-bottom: 28px
+			.desc
+				line-height: 24px
+
+	.img
+		width: 100%
+		position: relative
+		+img-ratio(610/1080)
+		.play-icon
+			position: absolute
+			width: 99px
+			height: 99px
+			top: 50%
+			left: 50%
+			z-index: 2
+			transform: translate(-50%, -50%)
+		&::after
+			position: absolute
+			pointer-events: auto
+			width: 100%
+			height: 100%
+			content: ''
+			top: 0
+			left: 0
+			background-color: $opacity
+	&:last-child
+		.col-lg-5
+			order: 2
+		.col-lg-7
+			order: 1
+		.content-wrapper
+			padding-left: 75px
+			padding-right: 0
+			.content
+				margin-left: 0
+				margin-right: auto
+				.desc
+					ul
+						li 
+							&::before
+								color: $main
+		.img
+			&::after
+				display: none
+.resale-detail-3
+	padding-bottom: 76px
+	.content
+		.main-title
+			margin-bottom: 50px
+		table
+			width: 100%
+			border-top: solid 1px $title
+			tr
+				border-bottom: solid 1px #e1e1e1
+				td
+					padding: 0 30px
+					line-height: 50px
+					&:first-child
+						background-color: #f3f6fb
+						color: $title
+						font-size: 1rem
+						font-weight: 700
+					&:last-child
+						color: #333333
+						font-size: 1rem
+						font-weight: 500
+	.img
+		+img-ratio(495/495)
+.resale-detail-4
+	background-color: #f3f3f3
+	.main-title
+		margin-bottom: 40px
+	.image-wrapper
+		+img-ratio(534/1255)
+	.list-wrapper
+		.list-item
+			padding-top: 58px
+			padding-left: 40px
+			ul
+				list-style: none
+				padding-left: 0
+				li
+					position: relative
+					padding-left: 20px
+					p
+						line-height: 36px
+						color: #333333
+						font-size: 1rem
+						font-weight: 700
+					&::before
+						position: absolute
+						left: 0
+						content: 'check_circle'
+						font-family: Material Icons
+						color: #2ca41c
+						line-height: 36px
+.resale-detail-5
+	.main-title
+		margin-bottom: 30px
+	.desc
+		max-width: 1080px
+		margin: 0 auto
+		line-height: 24px
+		margin-bottom: 26px
+	.list-wrapper
+		.big-img
+			margin-bottom: 30px
+			+img-ratio(375/600)
+		.small-img
+			+img-ratio(245/390)
+.resale-detail-6
+	position: relative
+	.background
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+	.main-title
+		margin-bottom: 40px
+.resale-detail-6
+	padding-bottom: 0
+.resale-detail-7
+	.main-title
+		margin-bottom: 40px
+	.img
+		width: 100%
+		height: 100%
+		border: solid 1px #e1e1e1
+.resale-detail-8
+	.main-title
+		margin-bottom: 28px
+	.wrap-box
+		display: flex
+		padding-top: 28px
+		@media screen and ( max-width: 992px )
+			flex-wrap: wrap
+			justify-content: flex-start
+			.box-item
+				margin-left: 0px!important
+				margin-bottom: 30px
+				flex: 0 0 50%
+			.box-phone
+				flex: 0 0 100%
+
+		.box-item
+			display: flex
+			align-items: flex-start
+			@media screen and ( max-width: 575px )
+				margin-bottom: 12px
+			&+.box-item
+				margin-left: 29px
+			em
+				color: #cccccc
+				font-size: r(24px)
+				font-weight: 400
+				margin-right: 8px
+				margin-top: -3px
+			a
+				color: #08293c
+				font-size: r(24px)
+				font-weight: 700
+				margin-top: 15px
+			span
+				color: #08293c
+				font-size: 1rem
+				font-weight: 700
+				display: block
+				margin-top: 10px
+
+
+
+
+

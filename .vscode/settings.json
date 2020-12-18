@@ -8,5 +8,6 @@
 	"editor.insertSpaces": false,
 	"editor.wordWrap": "on",
 	"codeMap.ShowOrHide": "hide",
-	"codeMap.GraphMode": "NotSelect"
+	"codeMap.GraphMode": "NotSelect",
+	"compile-hero.disable-compile-files-on-did-save-code": true
 }

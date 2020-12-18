@@ -1,7 +1,7 @@
 section.project-page.kv-section
 	.container
 		.page-desc.f-18.text-main.text-center.mx-auto Mong muốn mang lại giá trị tư vấn - đầu tư phát triển bền vững cho thị trường bất động sản Việt Nam với những sản phẩm chất lượng từ những dự án mà chúng tôi mang đến.
-		.zone-nav.d-flex.align-center.justify-center
+		.tab-nav.d-flex.align-center.justify-center
 			ul.d-flex.align-center.justify-center.p-0
 				li
 					a.f-18.fw-800.text-gray(href="") Đang triển khai
@@ -11,11 +11,11 @@ section.project-page.kv-section
 			-for(i=1; i<7; i++)
 				.list-project
 					.row
-						.col-lg-7.pr-0.zoom-img
+						.col-lg-7.zoom-img
 							.item-img
 								a(href="du-an-chi-tiet.html")
 									img.lazyload(data-src="./img/project/pro-"+i+".png", alt="")
-						.col-lg-5.pl-0
+						.col-lg-5
 							.project-content.d-flex.justify-center.flex-column
 								.main-title.fw-900.text-main.text-uppercase Kỳ Co Gateway
 								.desc

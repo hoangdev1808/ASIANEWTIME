@@ -102,19 +102,8 @@
 						transition: all 1s cubic-bezier(.22, .44, 0, 1)
 						.item-link
 							.item-img
-								display: block
-								position: relative
-								padding-top: 121%
-								height: 480px
-								overflow: hidden
 								transition: all 1s cubic-bezier(.22, .44, 0, 1)
-								img
-									width: 100%
-									height: 100%
-									object-fit: cover
-									position: absolute
-									top: 0
-									left: 0
+								+img-ratio(480/390)
 								&::after
 									pointer-events: none
 									position: absolute
@@ -168,42 +157,62 @@
 									bottom: 70px
 									.text
 										color: $main
-					.swiper-button-next,
-					.swiper-button-prev
-						top: 50%
-						width: 60px
-						height: 60px
-						border-radius: 50%
-						border: 2px solid #ffffff
-						opacity: .5
-						transition: all 1s cubic-bezier(.22, .44, 0, 1)
-						&:focus
-							outline: none
-						&:hover
-							opacity: 1
-					.swiper-button-next
-						right: -117px
-						&::after
-							position: absolute
-							content: url('../img/icons/arrow-right-white.png')
-							left: -70%
-							top: 50%
-							transform: translateX(50%)
-							transform: translateY(-50%)
-					.swiper-button-prev
-						left: -117px
-						&::after
-							position: absolute
-							content: url('../img/icons/arrow-left-white.png')
-							right: -70%
-							top: 50%
-							transform: translateX(50%)
-							transform: translateY(-50%)
-				.btn-view-more
-					position: absolute
-					left: 50%
-					transform: translateX(-50%)
-					margin-top: 30px
+			.tab-button
+				text-align: center
+				margin-top: 30px
+	@media screen and (max-width: 1600.98px)
+		.zone-wrapper
+			.tab-panels
+				.tabs
+					margin-bottom: 25px
+				.panel
+					.single-swiper
+						.project-item
+							.item-link
+								.item-img
+									height: 100%
+									padding-top: 80%
+	@media screen and ( max-width: 1366.98px)
+		.zone-section
+			.main-title
+				margin-bottom: 7px
+				font-size: 36/16*1rem
+				padding-bottom: 10px
+		.zone-wrapper
+			padding-top: 0
+			.tab-panels
+				.tabs
+					margin-bottom: 15px
+				.panel
+					.single-swiper
+						.project-item
+							.item-link
+								.item-img
+									height: 100%
+									padding-top: 75%
+							&:hover
+								transform: translateY(-15px)
+	@media screen and ( max-width: 375.98px)
+		.zone-section
+			.zone-desc
+				max-width: 100%
+		.zone-wrapper
+			.tab-panels
+				.tabs
+					max-width: 100%
+					.item
+						margin-right: auto
+					&::after
+						content: ''
+						width: 100%
+						height: 1px
+						background: $title
+						top: 70%
+						left: 0
+				.panel
+					.single-swiper
+						.swiper-container
+							overflow: hidden
 .home-page-4
 	> div
 		align-items: center
@@ -219,19 +228,6 @@
 		margin-bottom: 30px
 		.item-news
 			position: relative
-			.item-img
-				position: relative
-				a
-					display: block
-					position: relative
-					overflow: hidden
-					img
-						width: 100%
-						height: 100%
-						position: absolute
-						top: 0
-						left: 0
-						object-fit: cover
 			.item-desc
 				position: absolute
 				bottom: 0
@@ -254,21 +250,20 @@
 				.item-desc
 					transition: all 1s cubic-bezier(.22, .44, 0, 1)
 					background-color: $main
-					background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 203, 4, 0.5) 100%)
+					background-image: linear-gradient( to top, rgb(255,255,255) -20%, rgb(255,203,4) 100%)
 					opacity: 0.9
+
 	.big-image
 		.item-news
 			.item-img
-				height: 370px
 				a
-					padding-top: 52%
+					+img-ratio(370/600)
 	.small-image
 		.item-news
 			position: relative
 			.item-img
-				height: 170px
 				a
-					padding-top: 100%
+					+img-ratio(168.99/285)
 			.item-desc
 				max-height: 70px
 				padding-top: 7px
@@ -277,18 +272,17 @@
 				.text
 					line-height: 20px
 				.time
-					right: -12.5%
+					right: -12.9%
 					bottom: 105px
 
 	.small-image-more
 		.item-news
 			.item-img
-				height: 127px
 				a
-					padding-top: 70%
+					+img-ratio(126/189.99)
 			.item-desc
 				position: relative
-				min-height: 113px
+				min-height: 118px
 				padding: 7px 18px
 				.time
 					right: -20%
@@ -313,15 +307,7 @@
 		.item-img
 			width: 100%
 			a
-				display: block
-				position: relative
-				padding-top: 133%
-				img
-					position: absolute
-					top: 0
-					left: 0
-					width: 100%
-					height: 510px
+				+img-ratio(510/390)
 		.item-desc
 			position: absolute
 			bottom: 26px
@@ -332,21 +318,12 @@
 			display: flex
 			margin-bottom: 10px
 			.item-img
+				max-height: 120px
 				max-width: 120px
-				min-height: 120px
 				a
-					display: block
-					position: relative
-					padding-top: 100%
 					img
-						position: absolute
-						top: 0
-						left: 0
-						width: 100%
-						height: 100%
-						min-height: unset
+						
 			.item-desc
-				padding: 12px 20px
 				background-color: $white
 				position: static
 				display: flex

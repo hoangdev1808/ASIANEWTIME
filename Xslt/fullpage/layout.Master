@@ -1,0 +1,310 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs"
+    Inherits="CanhCam.Web.layout" %>
+
+    <!DOCTYPE html>
+    <html id="Html1" runat="server">
+
+    <head id="Head1" runat="server">
+        <title></title>
+        <link rel="stylesheet" href="/Data/Sites/1/skins/default/css/main.min.css">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <portal:MetaContent ID="MetaContent" runat="server" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
+            JQueryUIThemeName="smoothness" />
+        <portal:Favicon ID="Favicon1" runat="server" />
+        <portal:ScriptLoader ID="ScriptLoader1" runat="server" />
+        <portal:SkinFolderScript ID="SkinFolderScript1" runat="server" ScriptFileName="js/plugins.min.js"
+            AddToCombinedScript="true" />
+        <portal:SkinFolderScript ID="SkinFolderScript2" runat="server" ScriptFileName="js/customize.min.js"
+            AddToCombinedScript="true" />
+        <portal:SkinFolderScript ID="SkinFolderScript3" runat="server" ScriptFileName="js/canhcam.js"
+            AddToCombinedScript="true" />
+        <portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
+
+        <!--*********************************************************************************************-->
+        <!-- Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn                          -->
+        <!-- 156 Nguyen Van Thu, District 1, Ho Chi Minh City, Viet Nam.                                 -->
+        <!-- Phone: (+84) 8 38238364 – Fax: (+84) 8 38238365 - Email: info@canhcam.vn                    -->
+        <!-- Facebook: https://www.facebook.com/canhcam.vn                                               -->
+        <!--*********************************************************************************************-->
+    </head>
+
+    <body id="Body" runat="server" class="canhcam">
+        <portal:FacebookSdk ID="fbsdk" runat="server" />
+        <portal:LayoutDisplaySettings ID="LayoutDisplaySettings1" runat="server" />
+        <form id="frmMain" runat="server">
+            <asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
+            <asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
+            <asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
+            <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
+            <div id="wrapper">
+                <header class="d-flex align-center">
+                    <div class="container">
+                        <div class="main-nav d-flex align-center">
+                            <div class="navbar-collapse left-nav d-flex align-center">
+                                <portal:ModuleWrapper ID="mdl145" runat="server" ConfigureModuleId="145" />
+
+                            </div>
+                            <div class="navbar-brand mx-auto">
+                                <portal:ModuleWrapper ID="mdl135" runat="server" ConfigureModuleId="135" />
+                            </div>
+                            <div class="navbar-collapse right-nav d-flex align-center">
+                                <portal:ModuleWrapper ID="mdl146" runat="server" ConfigureModuleId="146" />
+
+                                <div class="header-icon d-flex align-center">
+
+                                    <portal:ModuleWrapper ID="mdl148" runat="server" ConfigureModuleId="148" />
+                                    <div class="btn-search"><em class="ri-search-line"></em></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-nav-mobile d-flex align-center justify-between">
+                            <ul class="navbar-mobile"></ul>
+                            <div class="kv-toggle"><span></span><span></span><span></span><span></span></div>
+                        </div>
+                    </div>
+                    <div class="search-wrapper">
+                        <div class="container">
+                            <portal:ModuleWrapper ID="mdl149" runat="server" ConfigureModuleId="149" />
+                        </div>
+                        <div class="close-button"><span>X</span></div>
+                    </div>
+                </header>
+                <main class="main">
+                    <div id="fake-header">
+                        <div class="close-button"><em class="ri-close-fill"></em><span>CLOSE</span></div>
+                        <ul class="menu-fake-header"></ul>
+                        <div class="menu-fake-bottom"><a class="btn btn-signup" href=""><img
+                                    src="/Data/Sites/1/skins/default/img/icons/mail.png" alt="">Đăng ký nhận tư vấn</a>
+                            <ul class="socail">
+                                <li><a href=""><em class="ri-facebook-fill"></em></a></li>
+                                <li><a href=""><em class="ri-youtube-fill"></em></a></li>
+                                <li><a href=""><em class="ri-instagram-line"></em></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="fake-header-open">
+                        <div class="open-button"><span>Menu</span></div>
+                    </div>
+                    <asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
+                        <asp:ContentPlaceHolder ID="altContent1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </asp:Panel>
+                    <asp:Panel ID="divLeft" runat="server" CssClass="leftside" Visible="True" SkinID="pnlPlain">
+                        <asp:ContentPlaceHolder ID="leftContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </asp:Panel>
+                    <asp:Panel ID="divCenter" runat="server" Visible="True" CssClass="center-rightandleftmargins"
+                        SkinID="pnlPlain">
+                        <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <div class="full-page">
+                            <section class="home-page-banner" id="home-banner" data-title="Trang Chủ">
+                                <div class="banner-wrapper">
+                                    <portal:ModuleWrapper ID="mdl166" runat="server" ConfigureModuleId="166" />
+                                </div>
+                            </section>
+                            <section class="home-page-2 kv-section"
+                                setBackground="/Data/Sites/1/skins/default/img/index/bg-home-2.png"
+                                data-title="giới thiệu">
+                                <portal:ModuleWrapper ID="mdl167" runat="server" ConfigureModuleId="167" />
+                            </section>
+                            <section class="kv-section home-page-3"
+                                setBackground="/Data/Sites/1/skins/default/img/index/bg-home-3.png" data-title="dự án">
+                                <portal:ModuleWrapper ID="mdl168" runat="server" ConfigureModuleId="168" />
+                            </section>
+                            <section class="home-page-4 kv-section"
+                                setBackground="/Data/Sites/1/skins/default/img/index/bg-home-4.png"
+                                data-title="tin tức">
+                                <portal:ModuleWrapper ID="mdl169" runat="server" ConfigureModuleId="169" />
+                            </section>
+                            <section class="home-page-5 kv-section"
+                                setBackground="/Data/Sites/1/skins/default/img/index/bg-home-5.png"
+                                data-title="tuyển dụng">
+                                <div class="container">
+                                    <div class="main-title text-white text-uppercase">tuyển dụng</div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="item-career zoom-img">
+                                                <div class="item-title text-white f-24 text-uppercase">Chính sách
+                                                    nhân sự</div>
+                                                <div class="item-img"><a href=""><img class="lazyload"
+                                                            data-src="./img/index/career-1.png" alt=""></a></div>
+                                                <div class="item-desc">
+                                                    <div class="text f-18 text-white">Trong ngôi nhà của đại gia
+                                                        đình Asia New Time, tất cả thành viên luôn được tôn trọng,
+                                                        lắng nghe và chia sẻ.</div>
+                                                </div>
+                                            </div><a class="btn btn-view-more" href="">Xem chi tiết</a>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="item-career zoom-img">
+                                                <div class="item-title text-white f-24 text-uppercase">Cơ hội nghề
+                                                    nghiệp</div>
+                                                <div class="item-img"><a href=""><img class="lazyload"
+                                                            data-src="./img/index/career-2.png" alt=""></a></div>
+                                                <div class="item-desc">
+                                                    <div class="text f-18 text-white">Asia New Time quan niệm đào
+                                                        tạo và phát triển nguồn nhân lực là chiến lược đầu tư cho sự
+                                                        thành công trong tương lai của công ty.</div>
+                                                </div>
+                                            </div><a class="btn btn-view-more" href="">Tìm hiểu cơ hội việc làm
+                                                ngay</a>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="item-career">
+                                                <div class="item-title text-white f-24 text-uppercase">văn hoá asia
+                                                    new time</div>
+                                                <div class="item-inner zoom-img">
+                                                    <div class="item-img"><a href=""><img class="lazyload"
+                                                                data-src="./img/index/career-3.png" alt=""></a>
+                                                    </div>
+                                                    <div class="item-desc"><a class="text f-16 lcl lcl-3" href="">Kiều
+                                                            Duyên - Minh chứng của câu nói “Có công mài
+                                                            sắt, có ngày nên kim”</a><a class="view-more f-12"
+                                                            href="">Xem chi tiết</a></div>
+                                                </div>
+                                                <div class="item-inner zoom-img">
+                                                    <div class="item-img"><a href=""><img class="lazyload"
+                                                                data-src="./img/index/career-4.png" alt=""></a>
+                                                    </div>
+                                                    <div class="item-desc"><a class="text f-16 lcl lcl-3" href="">Kiều
+                                                            Duyên - Minh chứng của câu nói “Có công mài
+                                                            sắt, có ngày nên kim”</a><a class="view-more f-12"
+                                                            href="">Xem chi tiết</a></div>
+                                                </div>
+                                                <div class="item-inner zoom-img">
+                                                    <div class="item-img"><a href=""><img class="lazyload"
+                                                                data-src="./img/index/career-5.png" alt=""></a>
+                                                    </div>
+                                                    <div class="item-desc"><a class="text f-16 lcl lcl-3" href="">Kiều
+                                                            Duyên - Minh chứng của câu nói “Có công mài
+                                                            sắt, có ngày nên kim”</a><a class="view-more f-12"
+                                                            href="">Xem chi tiết</a></div>
+                                                </div>
+                                                <div class="item-inner zoom-img">
+                                                    <div class="item-img"><a href=""><img class="lazyload"
+                                                                data-src="./img/index/career-6.png" alt=""></a>
+                                                    </div>
+                                                    <div class="item-desc"><a class="text f-16 lcl lcl-3" href="">Kiều
+                                                            Duyên - Minh chứng của câu nói “Có công mài
+                                                            sắt, có ngày nên kim”</a><a class="view-more f-12"
+                                                            href="">Xem chi tiết</a></div>
+                                                </div>
+                                            </div><a class="btn btn-view-more" href="">Xem tất cả</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="home-page-6 kv-section" data-title="đối tác"></section>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel ID="divRight" runat="server" Visible="True" CssClass="rightside" SkinID="pnlPlain">
+                        <asp:ContentPlaceHolder ID="rightContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </asp:Panel>
+                </main>
+                <footer>
+                    <div class="footer">
+                        <div class="home-partner" setBackground="/Data/Sites/1/skins/default/img/index/bg-home-6.png">
+                            <div class="container">
+                                <portal:ModuleWrapper ID="mdl140" runat="server" ConfigureModuleId="140" />
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="footer-header">
+                                <portal:ModuleWrapper ID="mdl142" runat="server" ConfigureModuleId="142" />
+                            </div>
+                            <div class="footer-bottom">
+                                <portal:ModuleWrapper ID="mdl143" runat="server" ConfigureModuleId="143" />
+                            </div>
+                            <portal:ModuleWrapper ID="mdl144" runat="server" ConfigureModuleId="144" />
+
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav>
+                            <ul class="nav navbar-nav listmenu">
+                                <portal:AdminMenuLink ID="lnkDashboard" IconCssClass="fa fa-key" RenderAsListItem="true"
+                                    runat="server" />
+                                <portal:FileManagerLink ID="lnkFileManager" IconCssClass="fa fa-folder-open"
+                                    RenderAsListItem="true" runat="server" />
+                                <portal:PageEditFeaturesLink ID="lnkPageContent" IconCssClass="fa fa-cog"
+                                    RenderAsListItem="true" runat="server" />
+                                <portal:PageEditSettingsLink ID="lnkPageSettings" IconCssClass="fa fa-edit"
+                                    RenderAsListItem="true" runat="server" />
+                                <portal:NewZoneLink ID="lnkNewZone" IconCssClass="fa fa-file" RenderAsListItem="true"
+                                    runat="server" />
+                                <portal:ZoneEditSettingsLink ID="lnkZoneSettings" IconCssClass="fa fa-edit"
+                                    RenderAsListItem="true" runat="server" />
+                                <li>
+                                    <div class="form-inline">
+                                        <div class="form-group">
+                                            <label class="sr-only">Mode</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <asp:ContentPlaceHolder ID="pageEditContent" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="nav">
+                                <li><a href="#" id="pullmenucms"><i class="fa fa-chevron-circle-right"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $("#pullmenucms").click(function (e) {
+                            e.preventDefault();
+                            if ($(this).parents('.cmsadminpanel').hasClass('toggled')) { ShowToolbar(); Set_Cookie('toolbarOpenState', 'open'); }
+                            else { HideToolbar(); Set_Cookie('toolbarOpenState', 'closed'); }
+                        });
+                        var openState = Get_Cookie('toolbarOpenState');
+                        if (openState != null) { if (openState == 'closed') { HideToolbar(); } if (openState == 'open') { ShowToolbar(); } }
+                    });
+                    function HideToolbar() { $('.cmsadminpanel').addClass("toggled"); $('.fa-chevron-circle-right').addClass('fa-rotate-180'); }
+                    function ShowToolbar() { $('.cmsadminpanel').removeClass("toggled"); $('.fa-chevron-circle-right').removeClass('fa-rotate-180'); }
+                </script>
+            </portal:AutoHidePanel>
+            <portal:Woopra ID="woopra11" runat="server" />
+        </form>
+        <div id="tool-wrapper">
+            <ul>
+                <li><a href=""><img src="/Data/Sites/1/skins/default/img/icons/chat.png" alt=""></a></li>
+                <li><a href=""><img src="/Data/Sites/1/skins/default/img/icons/mail-white.png" alt=""></a></li>
+                <li><a href=""><img src="/Data/Sites/1/skins/default/img/icons/phone.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div id="back-to-top"><img src="/Data/Sites/1/skins/default/img/icons/gototop.png" alt="">top</div>
+        <div id="facebook"><img src="/Data/Sites/1/skins/default/img/icons/facebook.png" alt=""></div>
+        <div id="overlay"></div>
+        <script>LazyLoad = function (doc) { var env, head, pending = {}, pollCount = 0, queue = { css: [], js: [] }, styleSheets = doc.styleSheets; function createNode(name, attrs) { var node = doc.createElement(name), attr; for (attr in attrs) attrs.hasOwnProperty(attr) && node.setAttribute(attr, attrs[attr]); return node } function finish(type) { var p = pending[type], callback, urls; p && (callback = p.callback, (urls = p.urls).shift(), pollCount = 0, urls.length || (callback && callback.call(p.context, p.obj), pending[type] = null, queue[type].length && load(type))) } function getEnv() { var ua = navigator.userAgent; ((env = { async: !0 === doc.createElement("script").async }).webkit = /AppleWebKit\//.test(ua)) || (env.ie = /MSIE|Trident/.test(ua)) || (env.opera = /Opera/.test(ua)) || (env.gecko = /Gecko\//.test(ua)) || (env.unknown = !0) } function load(type, urls, callback, obj, context) { var _finish = function () { finish(type) }, isCSS = "css" === type, nodes = [], i, len, node, p, pendingUrls, url; if (env || getEnv(), urls) if (urls = "string" == typeof urls ? [urls] : urls.concat(), isCSS || env.async || env.gecko || env.opera) queue[type].push({ urls: urls, callback: callback, obj: obj, context: context }); else for (i = 0, len = urls.length; i < len; ++i)queue[type].push({ urls: [urls[i]], callback: i === len - 1 ? callback : null, obj: obj, context: context }); if (!pending[type] && (p = pending[type] = queue[type].shift())) { for (head || (head = doc.head || doc.getElementsByTagName("head")[0]), i = 0, len = (pendingUrls = p.urls.concat()).length; i < len; ++i)url = pendingUrls[i], isCSS ? node = env.gecko ? createNode("style") : createNode("link", { href: url, rel: "stylesheet" }) : (node = createNode("script", { src: url })).async = !1, node.className = "lazyload", node.setAttribute("charset", "utf-8"), env.ie && !isCSS && "onreadystatechange" in node && !("draggable" in node) ? node.onreadystatechange = function () { /loaded|complete/.test(node.readyState) && (node.onreadystatechange = null, _finish()) } : isCSS && (env.gecko || env.webkit) ? env.webkit ? (p.urls[i] = node.href, pollWebKit()) : (node.innerHTML = '@import "' + url + '";', pollGecko(node)) : node.onload = node.onerror = _finish, nodes.push(node); for (i = 0, len = nodes.length; i < len; ++i)head.appendChild(nodes[i]) } } function pollGecko(node) { var hasRules; try { hasRules = !!node.sheet.cssRules } catch (ex) { return void ((pollCount += 1) < 200 ? setTimeout((function () { pollGecko(node) }), 50) : hasRules && finish("css")) } finish("css") } function pollWebKit() { var css = pending.css, i; if (css) { for (i = styleSheets.length; --i >= 0;)if (styleSheets[i].href === css.urls[0]) { finish("css"); break } pollCount += 1, css && (pollCount < 200 ? setTimeout(pollWebKit, 50) : finish("css")) } } return { css: function (urls, callback, obj, context) { load("css", urls, callback, obj, context) }, js: function (urls, callback, obj, context) { load("js", urls, callback, obj, context) } } }(this.document);</script>
+        <script>
+            LazyLoad.css([
+                '/Data/Sites/1/skins/default/css/plugins.min.css',
+                'https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css',
+                'https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap',
+                'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css',
+                'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'], function () {
+                });
+        </script>
+        <script>
+            LazyLoad.js([
+                'https://code.jquery.com/jquery-3.5.1.min.js',
+                'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js',
+                '/Data/Sites/1/skins/default/js/plugins.min.js',
+                '/Data/Sites/1/skins/default/js/main.min.js'], function () {
+                });
+        </script>
+    </body>
+
+    </html>

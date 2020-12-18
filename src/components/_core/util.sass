@@ -153,15 +153,14 @@
 			letter-spacing: 0.45px
 			width: 40px
 			height: 40px
-			border: 2px solid #999999
-			border-radius: 50%
+			// border: 2px solid #999999
+			border-radius: 0
 			display: flex
 			align-items: center
 			justify-content: center
 			transition: .3s all  ease-in-out
 			&:hover
 				background-color: #08293c
-				border: 2px solid #08293c
 				color: $main!important
 				transition: .4s all  ease-in-out
 				transform: translateY(-3px)
@@ -170,44 +169,36 @@
 				background-color: #08293c
 				border: 2px solid #08293c
 				color: $main!important
-.pagination-2
-	+type-none()
-	display: flex
-	align-items: center
-	justify-content: center
-	margin-top: 10px
-	cursor: pointer
-	margin-top: 10px
-	li
-		&+li
-			margin-left: 20px
-		&.active
-			a,span
-				background-color: #08293c
-				color: white
-		a,span
-			width: 40px
-			height: 40px
-			background-color: #f3f6fb
-			color: #08293c
-			font-size: 14px
-			font-weight: 800
-			display: flex
-			align-items: center
-			justify-content: center
-			transition: .3s all  ease-in-out
-			&:hover
-				background-color: #08293c
-				color: white
-				transform: translateY(-3px)
-// header
-// 	&.d-flex
-// 		display: none!important
-// 		display: none!important
-// footer
-// 	display: none
-// #tool-wrapper
-// 	display: none
+// .pagination-2
+// 	+type-none()
+// 	display: flex
+// 	align-items: center
+// 	justify-content: center
+// 	margin-top: 10px
+// 	cursor: pointer
+// 	margin-top: 10px
+// 	li
+// 		&+li
+// 			margin-left: 20px
+// 		&.active
+// 			a,span
+// 				background-color: #08293c
+// 				color: white
+// 		a,span
+// 			width: 40px
+// 			height: 40px
+// 			background-color: #f3f6fb
+// 			color: #08293c
+// 			font-size: 14px
+// 			font-weight: 800
+// 			display: flex
+// 			align-items: center
+// 			justify-content: center
+// 			transition: .3s all  ease-in-out
+// 			&:hover
+// 				background-color: #08293c
+// 				color: white
+// 				transform: translateY(-3px)
 .wrap-slide
 	position: relative
 .button-next, .button-prev
@@ -262,30 +253,6 @@
 		opacity: .5
 		filter: grayscale(100%)
 		transform: translate(-50%,-50%)!important
-.box-category
-	width: 100%
-	height: 50px
-	display: flex
-	align-items: center
-	justify-content: center
-	cursor: pointer
-	line-height: 50px
-	background-color: $main
-	p
-		color: #ffffff
-		font-size: 16px
-		font-weight: 600
-	.material-icons
-		color: #ffffff
-		transform: rotate(0deg)
-		transition: .3s
-		&.active
-			transform: rotate(180deg)
-			transition: .3s
-	@media screen and ( max-width: 991px)
-		width: 100%
-	@media screen and ( min-width: 992px)
-		display: none
 .zone-nav
 	position: relative
 	&.scolled
@@ -298,24 +265,59 @@
 			max-width: 80px
 			max-height: 60px
 			padding-left: 0
-			.box-category
-				p
-					font-size: 0
-				.material-icons
-					font-size: 30px
+			right: 0
+			transform: none
+			left: unset
 			.categroly
+				.box-category
+					p
+						font-size: 0
+					.material-icons
+						font-size: 30px
 				ul
 					position: absolute
 					top: 0
-					left: 0
+					right: -500%
 					background-color: #f3f3f3
 					min-width: 250px
+					opacity: 0
+					visibility: hidden
+				&.active
+					ul
+						right: 100%
+						opacity: 1
+						visibility: visible
 	.categroly
+		.box-category
+			width: 100%
+			height: 50px
+			display: flex
+			align-items: center
+			justify-content: center
+			cursor: pointer
+			line-height: 50px
+			background-color: $main
+			p
+				color: #ffffff
+				font-size: 16px
+				font-weight: 600
+			.material-icons
+				color: #ffffff
+				transform: rotate(0deg)
+				transition: .3s
+				&.active
+					transform: rotate(90deg)
+					transition: .3s
+			@media screen and ( max-width: 991px)
+				width: 100%
+			@media screen and ( min-width: 992px)
+				display: none
 		ul
 			max-width: 100%
 			display: flex
 			list-style: none
 			align-items: center
+			justify-content: center
 			padding-left: 0
 			margin: 0 auto
 			li
@@ -343,20 +345,95 @@
 				li
 					.nav-link
 						padding: .9rem
-						font-size: .6rem
 		@media screen and ( max-width: 1199px)
 			ul
 				li
 					.nav-link
 						padding: .5rem .3rem
-		@media screen and ( max-width: 991.98px)
+	@media screen and ( max-width: 991.98px)
+		position: absolute
+		right: 0
+		top: 70px
+		width: 50px
+		height: 50px
+		padding-left: 0
+		z-index: 2
+		.categroly
+			.box-category
+				p
+					font-size: 0
+				.material-icons
+					font-size: 30px
 			ul
-				display: none
+				position: absolute
+				top: 0
+				right: -500%
+				background-color: #f3f3f3
+				min-width: 250px
+				opacity: 0
+				visibility: hidden
 				width: 100%
 				margin: unset
 				flex-direction: column
+				z-index: 2
 				li
 					width: 100%
 					text-align: center
 					margin: 0
 					border-bottom: 1px solid $main
+			&.active
+				ul
+					right: 100%
+					opacity: 1
+					visibility: visible
+.cmsadminpanel ul
+	list-style: none
+.single-swiper,
+.kv-swiper
+	position: relative
+	.swiper-button-next,
+	.swiper-button-prev
+		top: 50%
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		border: 2px solid #ffffff
+		opacity: .5
+		transition: all 1s cubic-bezier(.22, .44, 0, 1)
+		&:focus
+			outline: none
+		&:hover
+			opacity: 1
+	.swiper-button-next
+		right: -117px
+		&::after
+			position: absolute
+			content: url('../img/icons/arrow-right-white.png')
+			left: -70%
+			top: 50%
+			transform: translateX(50%)
+			transform: translateY(-50%)
+	.swiper-button-prev
+		left: -117px
+		&::after
+			position: absolute
+			content: url('../img/icons/arrow-left-white.png')
+			right: -70%
+			top: 50%
+			transform: translateX(50%)
+			transform: translateY(-50%)
+.opacity
+	position: relative
+	pointer-events: auto
+	&::after
+		opacity: 1
+		visibility: visible
+		position: absolute
+		width: 100%
+		height: 100%
+		content: ''
+		top: 0
+		left: 0
+		background-color: $opacity
+.ModuleContent
+	width: 100%
