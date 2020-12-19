@@ -11,54 +11,53 @@ section.detail-page.kv-section
 						li
 							a(href="")
 								em.ri-twitter-fill
-				.full-content.zoom-img
+				.full-content
 					.img
 						img.lazyload(data-src="./img/tuyen-dung-sa/detail.png", alt="")
 					.content
 						.title.f-24.fw-700.color-text.text-uppercase THÔNG TIN TUYỂN DỤNG
 						table
-							tbody
-								tr
-									td
-										em.fa.fa-id-badge
-										|Số lượng cần tuyển
-									td 100
-								tr
-									td
-										em.fas.fa-dollar-sign
-										|Mức lương
-									td 
-										span 20 - 50 triệu / 1 tháng
-								tr
-									td
-										img(src="./img/icons/ht.png" alt="")
-										| Hình thức công việc
-									td Toàn thời gian cố định
-								tr
-									td
-										img(src="./img/icons/diadiem.png" alt="")
-										| Địa điểm làm việc
-									td TP. HCM, Bình Định, Vũng Tàu
-								tr
-									td
-										em.fa.fa-briefcase
-										| Kinh nghiệm
-									td 6 tháng - 1 năm
-								tr
-									td
-										img(src="./img/icons/patent.png" alt="")
-										| Yêu cầu bằng cấp
-									td Tốt nghiệp Cao đẳng / Đại học
-								tr
-									td
-										img(src="./img/icons/sex.png" alt="")
-										| Yêu cầu giới tính
-									td Nam / Nữ
-								tr
-									td
-										em.far.fa-calendar-check
-										|Thời hạn nộp hồ sơ
-									td 29/04/2020
+							tr
+								td
+									em.fa.fa-id-badge
+									|Số lượng cần tuyển
+								td 100
+							tr
+								td
+									em.fas.fa-dollar-sign
+									|Mức lương
+								td 
+									|20 - 50 triệu / 1 tháng
+							tr
+								td
+									img(src="./img/icons/ht.png" alt="")
+									| Hình thức công việc
+								td Toàn thời gian cố định
+							tr
+								td
+									img(src="./img/icons/diadiem.png" alt="")
+									| Địa điểm làm việc
+								td TP. HCM, Bình Định, Vũng Tàu
+							tr
+								td
+									em.fa.fa-briefcase
+									| Kinh nghiệm
+								td 6 tháng - 1 năm
+							tr
+								td
+									img(src="./img/icons/patent.png" alt="")
+									| Yêu cầu bằng cấp
+								td Tốt nghiệp Cao đẳng / Đại học
+							tr
+								td
+									img(src="./img/icons/sex.png" alt="")
+									| Yêu cầu giới tính
+								td Nam / Nữ
+							tr
+								td
+									em.far.fa-calendar-check
+									|Thời hạn nộp hồ sơ
+								td 29/04/2020
 				.list-content
 					.item
 						.title.f-24.fw-600.text-main.text-uppercase Mô tả công việc
@@ -100,17 +99,17 @@ section.detail-page.kv-section
 							li
 								p Kế hợp các phòng ban thực hiện các chiến dịch của công ty
 				.box-apply
-					a.btn.btn__down(href="") Tải mẫu đơn ứng tuyển
+					a.btn.btn-view-more(href="") Ứng tuyển
 					span Hoặc
-					a.btn.btn__apply(href="") Nộp đơn ứng tuyển
+					a.btn.btn-view-more(href="") Tải mẫu thông tin ứng viên
 			.col-lg-3.col-sm-12
 				.recuirement-other
 					.recuirement-header
-						.main-title.f-24.fw-700.text-main.text-uppercase Tuyển dụng khác
+						.main-title.fw-700.text-main.text-uppercase Tuyển dụng khác
 					-for(i=0; i<5; i++)
 						.recuirement-body
-							a(href="#")
-								.title.f-18.fw-700.text-black Nhân viên phát triển thị
+							.item
+								a(href="").title.f-18.fw-700.text-black Nhân viên phát triển thị
 								.address
 									em.material-icons room
 									.text Ho Chi Minh City

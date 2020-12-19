@@ -1,0 +1,139 @@
+.detail-page
+	.title
+		line-height: 32px
+	.bottom-wrapper
+		margin-bottom: 30px
+		border-bottom: 1px solid #e1e1e1
+		display: flex
+		justify-content: flex-end
+		.social
+			display: flex
+			list-style: none
+			padding: 0
+			padding-bottom: 10px
+			li
+				width: 30px
+				height: 30px
+				border: solid 1px #e1e1e1
+				border-radius: 50%
+				display: flex
+				align-items: center
+				justify-content: center
+				margin-left: 10px
+				transition: all .9s
+				a
+					em
+						font-size: 16px
+						font-weight: 900
+						color: #999999
+				&:hover
+					background-color: $title
+					a
+						em
+							color: $main
+	.full-content
+		display: flex
+		margin-bottom: 40px
+		box-shadow: 0 0 11px rgba(33,33,33,.2)
+		.img
+			width: 360px
+		.content
+			padding: 22px
+			padding-left: 40px
+			.title
+				margin-bottom: 10px
+			table
+				width: 100%
+				tr
+					td
+						line-height: 32px
+						&:first-child
+							padding-right: 35px
+							color: #666666
+							font-weight: 700
+							font-size: 1rem
+							img,
+							em
+								margin-right: 20px
+								width: 20px
+								height: 20px
+						&:last-child
+							padding-left: 35px
+							color: #666666
+							font-size: 1rem
+	.list-content
+		.item
+			margin-bottom: 40px
+			ul
+				list-style: none
+				padding: 0
+				li
+					position: relative
+					padding-left: 20px
+					p
+						line-height: 40px
+						font-size: 1rem
+						color: #333333
+					&::before
+						position: absolute
+						top: 50%
+						left: 0
+						transform: translateY(-50%)
+						content: 'fiber_manual_record'
+						font-family: Material Icons
+						font-size: 10px
+						line-height: 10px
+						color: #666666
+	.box-apply
+		.btn-view-more
+			font-size: 18px
+			color: $title
+			border: solid 1px $title
+			background-color: transparent
+			&:hover
+				box-shadow: 5px -1px 15px rgba(0, 0, 0, 0.1)
+				background-color: #ffcb04
+				background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 203, 4, 0.5) 100%)
+				transition: all 1s cubic-bezier(.22, .44, 0, 1)
+				transform: translateY(3px)
+				border: solid 1px transparent
+		span
+			padding: 0 25px
+			font-size: 18px
+			font-weight: 700
+			column-rule: #999999
+	.recuirement-other
+		.recuirement-header
+			.main-title
+				font-size: 24/16*1rem
+				padding-bottom: 35px
+				margin-bottom: 30px
+		.recuirement-body
+			.item
+				padding-bottom: 20px
+				border-bottom: solid 1px #e1e1e1
+				margin-bottom: 20px
+				.title
+					line-height: 24px
+				.address
+					display: flex
+					align-items: center
+					.material-icons
+						color: #666666
+						font-size: 1rem
+				.desc
+					display: flex
+					align-item: cenetr
+					.money
+						display: flex
+						align-items: center
+						padding-right: 15px
+						color: $main
+						.material-icons
+							font-size: 1rem
+					time
+						display: flex
+						align-items: center
+						.material-icons
+							color: #666666
+							font-size: 1rem
