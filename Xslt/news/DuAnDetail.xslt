@@ -23,10 +23,6 @@
         </xsl:if>
         <xsl:if test="position()=2">
             <section class="pro-detail-2 kv-section">
-                <xsl:attribute name="id">
-                    <xsl:text disable-output-escaping="yes">detail-</xsl:text>
-                    <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
-                </xsl:attribute>
                 <div class="container-fluid">
                     <xsl:apply-templates select="News" mode="ViTri"></xsl:apply-templates>
                 </div>
@@ -99,89 +95,7 @@
                     <img class="lazyload" data-src="/Data/Sites/1/skins/default/img/project/bg-3.png" />
                 </div>
                 <div class="container">
-                    <div class="list-wrapper" id="pro-detail-5">
-                        <div class="row">
-                            <div class="col-lg-7 pr-0 zoom-img">
-                                <div class="item-img">
-                                    <img class="lazyload" data-src="./img/project/canhomau-4.png" />
-                                </div>
-                            </div>
-                            <div class="col-lg-5 pl-0">
-                                <div class="project-content d-flex justify-center flex-column">
-                                    <div class="content">
-                                        <div class="main-title fw-900 text-uppercase text-main">KHU ECO – SMART CITY</div>
-                                        <div class="desc">
-                                            <div class="text fw-700 f-16 fw-700 color-text fw-700 color-text">Đây là khu vực phát triển khu dân cư sinh thái, mang tính chất hiện đại nhưng vẫn gần gũi với thiên nhiên. Các mẫu nhà được thiết kế mật độ thấp, bố trí nhiều cây xanh cảnh quan từ những khu vườn nhỏ tạo thành một khu vườn lớn biến ECO – SMART CITY trở thành một lá phổi xanh cho Ky Co Gateway.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-wrapper" id="pro-detail-6">
-                        <div class="row">
-                            <div class="col-lg-7 zoom-img">
-                                <div class="item-img">
-                                    <img class="lazyload" data-src="./img/project/canhomau-5.png" />
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="project-content d-flex justify-center flex-column">
-                                    <div class="content">
-                                        <div class="main-title fw-900 text-uppercase text-main">KHU OCEAN VIEW</div>
-                                        <div class="desc">
-                                            <div class="text fw-700 f-16 fw-700 color-text">Khu Ocean View hay còn gọi là Deluxe – town: đây là khu trung tâm nghỉ dưỡng ven Hồ vô cực (Swan Lake) – Safari Quy Nhơn – Sân Golf 36 lỗ chuẩn PGA. Đây là nơi bố trí các Biệt thự vườn – Biệt thự nghỉ dưỡng kiểu Nhật mang tính Zen – Theme. Đây là nơi chủ nhân có thể sở hữu – nghỉ ngơi – xác định đẳng cấp – riêng tư – phục hồi hoàn hảo cho sức khoẻ. Và trên hết, Khu Ocean View là điểm ngắm hệ sinh thái biển kỳ quan đẹp nhất nhì Việt Nam là Kỳ Co – Eo Gió. Khu Ocean View - Dự án Kỳ Co Gateway</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-wrapper" id="pro-detail-7">
-                        <div class="row">
-                            <div class="col-lg-7 zoom-img">
-                                <div class="item-img">
-                                    <img class="lazyload" data-src="./img/project/canhomau-6.png" />
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="project-content d-flex justify-center flex-column">
-                                    <div class="content">
-                                        <div class="main-title fw-900 text-uppercase text-main">KHU central</div>
-                                        <div class="desc">
-                                            <div class="text fw-700 f-16 fw-700 color-text">Khu Central hay còn gọi là Vibe Town: Với chức năng là trung tâm tiện ích của Kỳ Co Gateway và là nơi tập trung tiện ích của cả Khu đô thị sinh thái Nhơn Hội. Đây là khu vực bố trí dày các tiện ích: khu thể thao – khu công viên – khu hồ bơi – khu mua sắm – các Boutique Shophouse phục vụ cho nhu cầu trải nghiệm, Trung tâm điều dưỡng sức khoẻ quốc tế, trường kỹ năng quốc tế, nhà trẻ dành cho chuyên gia quốc tế.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-wrapper" id="pro-detail-8">
-                        <div class="row">
-                            <div class="col-lg-7 zoom-img">
-                                <div class="item-img">
-                                    <img class="lazyload" data-src="./img/project/canhomau-7.png" />
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="project-content d-flex justify-center flex-column">
-                                    <div class="content">
-                                        <div class="main-title fw-900 text-uppercase text-main">pháp lý của kỳ co</div>
-                                        <div class="desc">
-                                            <ul>
-                                                <li>
-                                                    <p>Hiện dự án đã bàn giao sổ đỏ từng nền theo từng phân khu</p>
-                                                </li>
-                                                <li>
-                                                    <p>Quy đất đô thị ven biển, xây tự do có quy hoạch khan hiếm</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <xsl:apply-templates select="News" mode="ECOCITY"></xsl:apply-templates>
                 </div>
             </section>
         </xsl:if>
@@ -194,7 +108,7 @@
     </xsl:template>
     <xsl:template match="News" mode="ViTri">
         <xsl:if test="position() = 1">
-            <div class="list-wrapper">
+            <div class="list-wrapper" id="detail-2">
                 <div class="row">
                     <div class="col-lg-5 p-0">
                         <div class="content-wrapper d-flex flex-column justify-center" setBackground="/Data/Sites/1/skins/default/img/project/detail-bg-2.png">
@@ -235,7 +149,7 @@
             </div>
         </xsl:if>
         <xsl:if test="position() != 1">
-            <div class="list-wrapper">
+            <div class="list-wrapper" id="detail-3">
                 <div class="row">
                     <div class="col-lg-5 p-0">
                         <div class="content-wrapper d-flex flex-column justify-center" setBackground="/Data/Sites/1/skins/default/img/project/detail-bg-1.png">
@@ -337,6 +251,38 @@
                     </xsl:attribute>
                 </img>
             </a>
+        </div>
+    </xsl:template>
+    <xsl:template match="News" mode="ECOCITY">
+        <div class="list-wrapper" id="pro-detail-5">
+            <div class="row">
+                <div class="col-lg-7 pr-0 zoom-img">
+                    <div class="item-img">
+                        <img class="lazyload">
+                            <xsl:attribute name="data-src">
+                                <xsl:value-of select="ImageUrl"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:attribute name="alt">
+                                <xsl:value-of select="Title"></xsl:value-of>
+                            </xsl:attribute>
+                        </img>
+                    </div>
+                </div>
+                <div class="col-lg-5 pl-0">
+                    <div class="project-content d-flex justify-center flex-column">
+                        <div class="content">
+                            <div class="main-title fw-900 text-uppercase text-main">
+                                <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                            </div>
+                            <div class="desc">
+                                <div class="text fw-700 f-16 fw-700 color-text fw-700 color-text">
+                                    <xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </xsl:template>
 </xsl:stylesheet>
