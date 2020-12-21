@@ -17,7 +17,7 @@
                 <xsl:apply-templates select="News[1]" mode="BigImg"></xsl:apply-templates>
                 <div class="small-image">
                     <div class="row">
-                        <xsl:apply-templates select="News[position&gt;1 and position&lt;4]" mode="Small"></xsl:apply-templates>
+                        <xsl:apply-templates select="News[position()&gt;1 and position()&lt;4]" mode="Small"></xsl:apply-templates>
                     </div>
                 </div>
                 <a class="btn btn-view-more">
@@ -39,7 +39,7 @@
                 <xsl:apply-templates select="News[1]" mode="BigImg1"></xsl:apply-templates>
                 <div class="small-image-more">
                     <div class="row">
-                        <xsl:apply-templates select="News[position&gt;1 and position&lt;5]" mode="SmallImg1"></xsl:apply-templates>
+                        <xsl:apply-templates select="News[position()&gt;1 and position()&lt;5]" mode="SmallImg1"></xsl:apply-templates>
                     </div>
                 </div>
                  <a class="btn btn-view-more">

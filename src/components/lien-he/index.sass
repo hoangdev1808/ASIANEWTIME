@@ -34,23 +34,30 @@
 		border-bottom: 0px solid #000
 		background-color: $white
 		transition: .3s all  ease-in-out
+		cursor: pointer
 		&+.item
 			border-top: 1px solid #d5d5d5
 			&:last-child
 				border-bottom: 1px solid #d5d5d5
-				&:hover
-					background-color: #f5f9ff
-				a
-					.title
-						color: #08293c
-						font-size: 16px
-						font-weight: 900
-						letter-spacing: 0.4px
-					p
-						display: flex
-						align-items: baseline
-						em
-							margin-right: 7px
+		&:hover
+			background-color: #f5f9ff
+		.title
+			color: #08293c
+			font-size: 16px
+			font-weight: 900
+			letter-spacing: 0.4px
+		p
+			display: flex
+			align-items: baseline
+			em
+				margin-right: 7px
+		&.active
+			background-color: $main
+			.title
+				color: #ffffff
+			p
+				color: #ffffff
+
 	.show-map
 		flex: 1
 		max-height: 482px

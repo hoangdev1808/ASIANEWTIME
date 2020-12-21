@@ -581,6 +581,25 @@ function tool(){
 	});
 }
 
+function Showmap() {
+    $('.list-select .list-item .item').click(function () {
+        $(this).addClass('active');
+        var datahref = $(this).attr('data-href');
+        $('.show-map').find('iframe').attr('src', function () {
+            return datahref;
+        })
+        $('.list-select .list-item .item').not(this).removeClass('active')
+    });
+}
+
+function changePlaceholder() {
+    $('.wrap-form .frm-captcha .frm-captcha-input input ').attr('placeholder', 'Nhập mã captcha');
+    if ($('.wrap-form .frm-captcha').length >= 1) {
+        $('.form-contact .wrap-form .frm-btnwrap').appendTo('.wrap-form .frm-captcha')
+    }
+    $('.footer-subscribed .wrap-form .frm-btnwrap input').attr('value', '')
+}
+
 $(document).ready(function () {
 	setBackgroundElement();
 	scrollToTop();
@@ -603,6 +622,7 @@ $(document).ready(function () {
 	InsertBd();
 	phantrang();
 	tool();
+	Showmap();
 	//Image map tool
 	//Map high light
 	$(".image-map-wrapper img[usemap]").maphilight({

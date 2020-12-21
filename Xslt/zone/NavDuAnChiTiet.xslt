@@ -8,7 +8,7 @@
             <em class="material-icons">expand_more</em>
         </div>
         <ul>
-            <xsl:apply-templates select="Zone/Zone"></xsl:apply-templates>
+            <xsl:apply-templates select="Zone/Zone/Zone"></xsl:apply-templates>
         </ul>
     </xsl:template>
     <xsl:template match="Zone">
